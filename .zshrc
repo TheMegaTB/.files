@@ -72,6 +72,31 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# ex - archive extractor
+# usage: ex <file>
+extract ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;  
+      *.tar.gz)    tar xzf $1   ;;  
+      *.bz2)       bunzip2 $1   ;;  
+      *.rar)       unrar x $1     ;;  
+      *.gz)        gunzip $1    ;;  
+      *.tar)       tar xf $1    ;;  
+      *.tbz2)      tar xjf $1   ;;  
+      *.tgz)       tar xzf $1   ;;  
+      *.zip)       unzip $1     ;;  
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;  
+      *.xz)        unxz $1    ;;
+      *)           echo "'$1' cannot be extracted via extract" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi  
+}
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -85,6 +110,8 @@ ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
+
+eval "$(thefuck --alias)"
 
 source $ZSH/oh-my-zsh.sh
 
