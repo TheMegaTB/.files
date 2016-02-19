@@ -34,4 +34,5 @@ fi
 
 sh ~/.fehbg &
 xbindkeys
+unclutter &
 exec i3
