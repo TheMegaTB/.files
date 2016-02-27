@@ -35,4 +35,8 @@ fi
 sh ~/.fehbg &
 xbindkeys
 unclutter &
+redshift &
+pulseaudio -D &
+xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
+#perl ~/.xSwipe/xSwipe.pl -n -d 0.5 1>/dev/null 2>&1 &
 exec i3

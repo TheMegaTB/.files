@@ -24,7 +24,7 @@ set $ws4  "4"
 set $ws5  "5"
 set $ws6  "6"
 set $ws7  "7"
-set $ws8  "8"
+set $ws8  "8: "
 set $ws9  "9: "
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -165,22 +165,27 @@ for_window [class="Nautilus" instance="file_progress"] floating enable		# Nautil
 # Bind specific windows to specific workspaces
 assign [title="Soundnode App"]	$ws9
 assign [class="(?i)chrome"]	$ws1
+assign [class="qemu-system-x86_64"] $ws8
 
 # Custom keybindings
 bindsym $mod+control+l exec ~/.i3/i3-fancy-lock/lock
 bindsym $mod+shift+s exec --no-startup-id teiler
 bindsym $mod+y fullscreen disable; floating enable; resize set 400 300; sticky enable; move window to position 1515 20
 
+bindsym $mod+shift+comma workspace next
+bindsym $mod+shift+m workspace prev
+
 # Remove title bars
 new_window 1pixel
 
 # Add system menu
-set $mode_power <span>     </span><span background='#fabd2f' foreground='#000000'> power </span> <span foreground='#FFFFFF'>l</span>ock <span foreground='#FFFFFF'>e</span>xit <span foreground='#FFFFFF'>s</span>uspend <span foreground='#FFFFFF'>r</span>eboot <span foreground='#FFFFFF'>p</span>oweroff
+set $mode_power <span>     </span><span background='#fabd2f' foreground='#000000'> power </span> <span foreground='#FFFFFF'>l</span>ock <span foreground='#FFFFFF'>e</span>xit <span foreground='#FFFFFF'>s</span>uspend <span foreground='#FFFFFF'>h</span>ibernate <span foreground='#FFFFFF'>r</span>eboot <span foreground='#FFFFFF'>p</span>oweroff
 bindsym $mod+0 mode "$mode_power"
 mode "$mode_power" {
 	bindsym l exec --no-startup-id i3exit lock, mode "default"
 	bindsym e exec --no-startup-id i3exit logout, mode "default"
 	bindsym s exec --no-startup-id i3exit suspend, mode "default"
+	bindsym h exec --no-startup-id i3exit hibernate, mode "default"
 	bindsym r exec --no-startup-id i3exit reboot, mode "default"
 	bindsym p exec --no-startup-id i3exit shutdown, mode "default"
 
@@ -210,3 +215,4 @@ client.urgent #C20000 #C20000 #FFFFFF #FFFFFF
 
 # Autostart some applications
 exec --no-startup-id xedgewarp -b
+exec --no-startup-id conky --quiet -u 10 -d

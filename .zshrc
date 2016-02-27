@@ -105,6 +105,8 @@ extract ()
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias lc='lsc'
+alias 'update-grub'='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
