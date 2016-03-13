@@ -1,6 +1,5 @@
 #!/bin/bash
 raw=$(pactl list | grep "	Sink: " | sed "s/[^0-9]//g;s/^$/-1/;")
-PAuser="themegatb"
 sinks=($raw)
 value="5%"
 
@@ -10,7 +9,6 @@ elif [ "$1" == "+" ]; then
 	change="+"
 fi
 
-#echo "Sinks:"
 for sink in "${sinks[@]}"
 do
 	if [ "$1" == "mute" ]; then

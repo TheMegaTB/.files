@@ -49,7 +49,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git pass)
 
 # User configuration
 
@@ -107,6 +107,8 @@ extract ()
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lc='lsc'
 alias 'update-grub'='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
+eval $(ssh-agent) >/dev/null
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
