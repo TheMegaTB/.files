@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --bg-fill '$HOME/dotfiles/468893.jpg' 
+feh  --bg-fill '/home/themegatb/dotfiles/468893.jpg' 

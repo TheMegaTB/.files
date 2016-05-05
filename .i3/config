@@ -162,6 +162,7 @@ workspace_auto_back_and_forth yes
 for_window [window_role="pop-up" class="google-chrome"] floating enable, move absolute position 1160 px 455 px
 for_window [class="Nautilus" instance="file_progress"] floating enable
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse
+for_window [class="(?i)Splashscreen"] floating enable
 
 # Bind specific windows to specific workspaces
 assign [title="Soundnode App"]	$ws9
@@ -172,7 +173,7 @@ assign [class="qemu-system-x86_64"] $ws8
 # Custom keybindings
 bindsym $mod+control+l exec ~/.i3/i3-fancy-lock/lock
 bindsym $mod+shift+s exec --no-startup-id teiler
-bindsym $mod+y fullscreen disable; floating enable; resize set 400 300; sticky enable; move window to position 1515 20
+bindsym $mod+y fullscreen disable; floating enable; resize set 608 342; sticky enable; move window to position 1515 20
 
 bindsym $mod+shift+comma workspace next
 bindsym $mod+shift+m workspace prev

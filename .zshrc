@@ -119,4 +119,7 @@ eval "$(thefuck --alias)"
 
 source $ZSH/oh-my-zsh.sh
 
+export VISUAL=nano
+export EDITOR="$VISUAL"
+
 /home/themegatb/.startx.sh
