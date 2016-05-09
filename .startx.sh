@@ -1,3 +1,5 @@
 if [ -z "$DISPLAY" ]; then
-	startx
+	if [ "$(tty)" == "/dev/tty1" ]; then
+		startx
+	fi
 fi
