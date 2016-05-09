@@ -1,0 +1,22 @@
+#!/usr/bin/openrc-run
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+depend() {
+	before netmount
+	need net
+	need localmount
+}
+
+start() {
+	ebegin "Opening VPN tunnel"
+	start-stop-daemon --background --start --exec /usr/bin/vpnc -- home
+	eend $?
+}
+
+stop() {
+	ebegin "Closing VPN tunnel"
+	start-stop-daemon --stop --exec /usr/bin/vpnc -- home
+	eend $?
+}

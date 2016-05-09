@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+BULLETTRAIN_CONTEXT_SHOW=true
+BULLETTRAIN_CONTEXT_DEFAULT_USER=`whoami`
+BULLETTRAIN_EXEC_TIME_SHOW=true
+ZSH_THEME="bullet-train"
+#ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,33 +49,17 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pass)
+plugins=(git pass common-aliases dirhistory last-working-dir sudo alias-tips autojump)
 
 # User configuration
-
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# ex - archive extractor
-# usage: ex <file>
-extract ()
-{
+extract () {
   if [ -f $1 ] ; then
     case $1 in
       *.tar.bz2)   tar xjf $1   ;;  
@@ -97,26 +81,24 @@ extract ()
   fi  
 }
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias lc='lsc'
-alias 'update-grub'='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+export DEFAULT_USER=`whoami`
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT="You know you have an alias for that, right? "
+export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="_"
 
 eval $(ssh-agent) >/dev/null
 
-ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
-if [[ ! -d $ZSH_CACHE_DIR ]]; then
-  mkdir $ZSH_CACHE_DIR
-fi
-
 eval "$(thefuck --alias)"
+eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-wcomp zsh-ccomp-install zsh-wcomp-install)"
+
+alias o='a -e nano'
+alias c='f -e cat'
+alias lc='lsc'
+alias size='du -sh'
+alias 'update-grub'='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 source $ZSH/oh-my-zsh.sh
+
+export VISUAL=nano
+export EDITOR="$VISUAL"
 
 /home/themegatb/.startx.sh

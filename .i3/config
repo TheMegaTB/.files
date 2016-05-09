@@ -92,10 +92,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+#bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+#bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -146,7 +146,7 @@ bindsym $mod+Shift+r restart
 
 set $mode_resize <span>        </span><span background='#fabd2f' foreground='#000000'> resize </span> <span foreground='#FFFFFF'>l</span>eft <span foreground='#FFFFFF'>r</span>ight <span foreground='#FFFFFF'>u</span>p <span foreground='#FFFFFF'>d</span>own
 bindsym $mod+r mode "$mode_resize"
-mode "$mode_resize" {
+mode --pango_markup "$mode_resize" {
 	bindsym Left resize shrink width 10 px or 1 ppt
 	bindsym Down resize grow height 10 px or 1 ppt
 	bindsym Up resize shrink height 10 px or 1 ppt
@@ -168,20 +168,28 @@ workspace_auto_back_and_forth yes
 for_window [window_role="pop-up" class="google-chrome"] floating enable, move absolute position 1160 px 455 px
 for_window [class="Nautilus" instance="file_progress"] floating enable
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse
+for_window [class="(?i)Splashscreen"] floating enable
 
 # Bind specific windows to specific workspaces
-assign [title="Soundnode"]	$ws9
-assign [class="(?i)chrome"]	$ws1
+assign [title="Soundnode(?i)"]	$ws9
+assign [class="google-chrome" window_role="^((?!pop-up).)*$"]	$ws1
 assign [class="(?i)atom"]	$ws3
 assign [class="qemu-system-x86_64"] $ws8
+for_window [window_role="pop-up" class="google-chrome" title="WhatsApp Web(?i)"] resize set 700 700, move absolute position 370 px 100 px, move to scratchpad, scratchpad show
+for_window [window_role="pop-up" class="google-chrome" title="^((?!WhatsApp Web).)*$"] move to scratchpad, scratchpad show
 
 # Custom keybindings
 bindsym $mod+control+l exec ~/.i3/i3-fancy-lock/lock
 bindsym $mod+shift+s exec --no-startup-id teiler
-bindsym $mod+y fullscreen disable; floating enable; resize set 400 300; sticky enable; move window to position 1515 20
+bindsym $mod+y fullscreen disable; floating enable; resize set 608 342; sticky enable; move window to position 1515 20
 
 bindsym $mod+shift+comma workspace next
 bindsym $mod+shift+m workspace prev
+
+bindsym $mod+o move scratchpad
+bindsym $mod+i scratchpad show
+bindsym $mod+c [title="WhatsApp Web(?i)"] scratchpad show
+bindsym $mod+h [window_role="pop-up" class="google-chrome" title="^((?!WhatsApp Web).)*$"] scratchpad show
 
 # Remove title bars
 new_window 1pixel
@@ -189,7 +197,7 @@ new_window 1pixel
 # Add system menu
 set $mode_power <span>     </span><span background='#fabd2f' foreground='#000000'> power </span> <span foreground='#FFFFFF'>l</span>ock <span foreground='#FFFFFF'>e</span>xit <span foreground='#FFFFFF'>s</span>uspend <span foreground='#FFFFFF'>h</span>ibernate <span foreground='#FFFFFF'>r</span>eboot <span foreground='#FFFFFF'>p</span>oweroff
 bindsym $mod+0 mode "$mode_power"
-mode "$mode_power" {
+mode --pango_markup "$mode_power" {
 	bindsym l exec --no-startup-id i3exit lock, mode "default"
 	bindsym e exec --no-startup-id i3exit logout, mode "default"
 	bindsym s exec --no-startup-id i3exit suspend, mode "default"
