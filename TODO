@@ -1,0 +1,3 @@
+ - Remote backup
+ - Commit dotfiles on boot
+ - Rename 'dotfiles' to '.files'

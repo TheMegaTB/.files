@@ -8,9 +8,10 @@ do
 	sink="${sinks[$key]}"
 	vol=$(/home/themegatb/scripts/getvolume.pl $sink)
 	if [ "${#sinks[@]}" -gt "1" ] && [ "$key" -gt "0" ]; then
-		output="$output  "
-		#output="$output$sink: "
+		#output="$output  "
+		output="$output  $sink: "
 	fi
 	output="$output  $vol"
 done
+sleep .1
 echo $output
