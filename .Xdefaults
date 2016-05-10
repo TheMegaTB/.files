@@ -50,8 +50,8 @@ rofi.width: 100
 rofi.lines: 5
 rofi.columns: 1
 rofi.opacity: 80
-!rofi.fg: #505050
-!rofi.bg: #000000
+rofi.fg: #505050
+rofi.bg: #000000
 rofi.color-window: #505050,#000000
 rofi.hlfg: #ffb964
 rofi.hlbg: #000000
