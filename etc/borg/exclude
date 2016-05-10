@@ -1,0 +1,13 @@
+/root
+/mnt
+/dev
+/proc
+/run
+/var/log
+/tmp
+/sys
+/usr/bin
+/home/themegatb/.*
+/var/cache
+/var/lock
+/var/tmp
