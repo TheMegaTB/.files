@@ -17,7 +17,7 @@ ICON="f$(( 244 - LEVEL ))"
 if [ "$(ls -A /sys/class/power_supply)" ]; then
 	echo -e "  \u${ICON}  ${CHARGE}%${STATE}"
 else
-	echo ""
+	echo " "
 fi
 
 [[ "${LEVEL}" = "0" ]] && {
