@@ -2,3 +2,4 @@
  - Commit dotfiles on boot
  - Rename 'dotfiles' to '.files'
  - Fix pulseaudio sink-duplication problem in i3blocks
+ - Fix broken imgur upload

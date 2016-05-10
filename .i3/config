@@ -181,6 +181,7 @@ for_window [window_role="pop-up" class="google-chrome" title="^((?!WhatsApp Web)
 # Custom keybindings
 bindsym $mod+control+l exec ~/.i3/i3-fancy-lock/lock
 bindsym $mod+shift+s exec --no-startup-id teiler
+bindsym $mod+p exec --no-startup-id rofi-pass
 bindsym $mod+y fullscreen disable; floating enable; resize set 608 342; sticky enable; move window to position 1515 20
 
 bindsym $mod+shift+comma workspace next
