@@ -1,6 +1,7 @@
 #!/bin/bash
 
-declare -a repos=("/mnt/backup/local/archbook" "themegatb@homeserver:/mnt/backups/archbook")
+#declare -a repos=("/mnt/backup/local/archbook" "themegatb@homeserver:/mnt/backups/archbook")
+source /etc/borg/repos
 
 echo "Creating Backup..." > /etc/borg/info
 echo 0 > /etc/borg/state
