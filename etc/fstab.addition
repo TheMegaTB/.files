@@ -1,0 +1,3 @@
+//homeserver/backups				/mnt/backup/homeserver	cifs	credentials=/home/themegatb/.smbcredentials,iocharset=utf8,sec=ntlm 0 0
+//homeserver/storage                            /mnt/stor		cifs    credentials=/home/themegatb/.smbcredentials,iocharset=utf8,sec=ntlm 0 0
+
