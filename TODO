@@ -1,4 +1,4 @@
- - Remote backup inside ArchVM
+ - Restructure VM setups (stacked images and snapshots)
  - Commit dotfiles on boot
  - Rename 'dotfiles' to '.files'
  - Fix pulseaudio sink-duplication problem in i3blocks
