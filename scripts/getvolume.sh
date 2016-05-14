@@ -13,5 +13,9 @@ do
 	fi
 	output="$output  $vol"
 done
-sleep .1
+
+if [ "$BLOCK_BUTTON" != "" ]; then
+  pavucontrol &
+fi
+
 echo $output

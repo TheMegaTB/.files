@@ -167,13 +167,14 @@ workspace_auto_back_and_forth yes
 # Put specific windows in floating mode
 for_window [window_role="pop-up" class="google-chrome"] floating enable, move absolute position 1160 px 455 px
 for_window [class="Nautilus" instance="file_progress"] floating enable
-for_window [class="(?i)pavucontrol"] floating enable, move position mouse
+for_window [class="(?i)pavucontrol"] floating enable, move position center
 for_window [class="(?i)Splashscreen"] floating enable
 
 # Bind specific windows to specific workspaces
 assign [title="Soundnode(?i)"]	$ws9
 assign [class="google-chrome" window_role="^((?!pop-up).)*$"]	$ws1
 assign [class="(?i)atom"]	$ws3
+assign [class="(?i)PyCharm(?i)"] $ws3
 assign [class="qemu-system-x86_64"] $ws8
 for_window [window_role="pop-up" class="google-chrome" title="WhatsApp Web(?i)"] resize set 700 700, move absolute position 370 px 100 px, move to scratchpad, scratchpad show
 for_window [window_role="pop-up" class="google-chrome" title="^((?!WhatsApp Web).)*$"] move to scratchpad, scratchpad show
