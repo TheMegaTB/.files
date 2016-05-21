@@ -90,6 +90,7 @@ eval $(ssh-agent) >/dev/null
 eval "$(thefuck --alias)"
 eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-wcomp zsh-ccomp-install zsh-wcomp-install)"
 
+alias rsync-progress="rsync -avvz --times --stats --checksum --human-readable --acls --itemize-changes --progress --out-format='[%t] [%i] (Last Modified: %M) (bytes: %-10l) %-100n'"
 alias o='a -e nano'
 alias c='f -e cat'
 alias lc='lsc'
