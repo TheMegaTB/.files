@@ -96,6 +96,8 @@ alias c='f -e cat'
 alias lc='lsc'
 alias size='du -sh'
 alias 'update-grub'='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias 'cgr'='cargo run --release'
+alias 'cgrb'='cgr --bin'
 
 source $ZSH/oh-my-zsh.sh
 
