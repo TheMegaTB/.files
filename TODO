@@ -1,4 +1,5 @@
- - qemu cmdline script
+ - Fix RTP streaming
+ - Hibernate on low battery
  - lock screen on auto suspend
  - Restructure VM setups (stacked images and snapshots)
  - Add mod+arrowkeys to quickly switch workspaces
