@@ -16,13 +16,12 @@ ICON="f$(( 244 - LEVEL ))"
 
 if [ "$(ls -A /sys/class/power_supply)" ]; then
 	echo -e "  \u${ICON}  ${CHARGE}%${STATE}"
+	[[ "${LEVEL}" = "0" ]] && {
+	    [[ -z "${STATE}" ]] || i3-msg "fullscreen disable"
+	    exit 33
+	}
 else
 	echo " "
 fi
-
-[[ "${LEVEL}" = "0" ]] && {
-    [[ -z "${STATE}" ]] || i3-msg "fullscreen disable"
-    exit 33
-}
 
 exit 0
