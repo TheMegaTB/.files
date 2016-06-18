@@ -8,6 +8,7 @@
 /sys
 /usr/bin
 /home/themegatb/.*
+/home/themegatb/Downloads
 /var/cache
 /var/lock
 /var/tmp
