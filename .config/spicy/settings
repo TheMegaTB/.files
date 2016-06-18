@@ -4,6 +4,8 @@ grab-mouse=true
 scaling=true
 auto-clipboard=true
 
+disable-inputs=false
+
 [ui]
 toolbar=true
 statusbar=true

@@ -1,6 +1,7 @@
 #!/bin/sh
 lock() {
-    /usr/share/i3fancylock/lock
+    /usr/bin/i3lock-fancy
+    # /usr/share/i3fancylock/lock
 }
 
 case "$1" in
