@@ -173,6 +173,7 @@ for_window [class="(?i)Splashscreen"] floating enable
 # Bind specific windows to specific workspaces
 assign [title="Soundnode(?i)"]	$ws9
 assign [class="google-chrome" window_role="^((?!pop-up).)*$"]	$ws1
+assign [class="Firefox"] $ws1
 assign [class="(?i)atom"]	$ws3
 assign [class="(?i)PyCharm(?i)"] $ws3
 assign [class="qemu-system-x86_64"] $ws8
