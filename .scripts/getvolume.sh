@@ -16,9 +16,9 @@ done
 
 if [ "$BLOCK_BUTTON" == "1" ]; then
   pavucontrol &
-elif [ "$BLOCK_BUTTON" == "5" ]; then
-  /etc/acpi/handlers/volume +
 elif [ "$BLOCK_BUTTON" == "4" ]; then
+  /etc/acpi/handlers/volume +
+elif [ "$BLOCK_BUTTON" == "5" ]; then
   /etc/acpi/handlers/volume -
 fi
 
