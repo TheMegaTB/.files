@@ -27,7 +27,7 @@ own_window_class Conky
 own_window_type override
 #own_window_type normal
 own_window_transparent yes
-own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
 
 own_window_argb_visual yes
 own_window_argb_value 255
@@ -59,11 +59,11 @@ color5 FFFFFF   # days
 #====================================
 #   Icon Sources
 #====================================
-template0 ~/.conky-vision-icons/\#FFFFFF  # today
-template1 ~/.conky-vision-icons/\#FFFFFF  # +1day
-template2 ~/.conky-vision-icons/\#FFFFFF  # +2days
-template3 ~/.conky-vision-icons/\#FFFFFF  # +3days
-template4 ~/.conky-vision-icons/\#FFFFFF  # +4days
+template0 ~/.conky-vision-icons/  # today
+template1 ~/.conky-vision-icons/  # +1day
+template2 ~/.conky-vision-icons/  # +2days
+template3 ~/.conky-vision-icons/  # +3days
+template4 ~/.conky-vision-icons/  # +4days
 
 
 #====================================
