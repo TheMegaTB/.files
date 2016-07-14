@@ -85,23 +85,24 @@ export DEFAULT_USER=`whoami`
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="You know you have an alias for that, right? "
 export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="_"
 
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 eval $(ssh-agent) >/dev/null
 
 eval "$(thefuck --alias)"
 eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-wcomp zsh-ccomp-install zsh-wcomp-install)"
 
 alias rsync-progress="rsync -avvz --times --stats --checksum --human-readable --acls --itemize-changes --progress --out-format='[%t] [%i] (Last Modified: %M) (bytes: %-10l) %-100n'"
-alias o='a -e nano'
+alias o="a -e nvim"
 alias c='f -e cat'
 alias lc='lsc'
 alias size='du -sh'
 alias 'update-grub'='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias 'cgr'='cargo run --release'
 alias 'cgrb'='cgr --bin'
+alias 'nano'='nvim'
 
 source $ZSH/oh-my-zsh.sh
-
-export VISUAL=nano
-export EDITOR="$VISUAL"
 
 /home/themegatb/.startx.sh
