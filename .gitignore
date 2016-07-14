@@ -8,7 +8,4 @@
 .config/discord
 .config/Soundnode
 .config/Skype\ for\ Linux
-.config/nvim/dein.vim
-.config/nvim/nvim/dein.vim
-.config/nvim.old/bundle
-.config/nvim.old/tmp
+.config/nvim/.init.vim-rplugin~
