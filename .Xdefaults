@@ -5,7 +5,7 @@
 !urxvt*font:		xft:Hack-Regular:size=10,xft:Inconsolata\ for\ Powerline:pixelsize=12
 !urxvt*font:		xft:/home/themegatb/.local/share/fonts/Hack-Regular.ttf
 urxvt*font:		xft:Hack-Regular
-urxvt*termName:         rxvt
+!!urxvt*termName:         rxvt
 !urxvt*background:       #000000
 urxvt*foreground:       #cccccc
 urxvt*scrollBar:        false
@@ -25,7 +25,7 @@ urxvt*background:       rgba:0000/0000/0000/cccc
 URxvt.transparent:   true
 URxvt.tintColor:     white
 URxvt.shading:       50 
- 
+
 URxvt*color0:      #000000
 URxvt*color1:      #9e1828
 URxvt*color2:      #aece92
