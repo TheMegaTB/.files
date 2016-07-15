@@ -14,14 +14,18 @@ call dein#begin(expand('~/.cache/dein'))
  call dein#add('tpope/vim-commentary')
  call dein#add('tpope/vim-eunuch')
  call dein#add('tpope/vim-repeat')
+ call dein#add('tpope/vim-fugitive')
  call dein#add('vim-airline/vim-airline')
  call dein#add('Raimondi/delimitMate')
  call dein#add('airblade/vim-gitgutter')
  call dein#add('Shougo/deoplete.nvim')
  call dein#add('SirVer/ultisnips')
+ call dein#add('scrooloose/nerdtree')
+ call dein#add('Xuyuanp/nerdtree-git-plugin')
  "  Themes
  call dein#add('vim-airline/vim-airline-themes')
  call dein#add('tyrannicaltoucan/vim-deep-space')
+ call dein#add('ryanoasis/vim-devicons')
 
 call dein#end()
 
@@ -44,5 +48,9 @@ set expandtab
 set shiftwidth=4
 set cc=80
 set completeopt-=preview
+set encoding=utf8
+
 let g:airline_theme='luna'
 let g:airline_powerline_fonts=1
+let g:airline_skip_empty_sections = 1
+let g:deoplete#enable_at_startup = 1
