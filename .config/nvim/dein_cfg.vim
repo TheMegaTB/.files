@@ -49,6 +49,8 @@ set shiftwidth=4
 set cc=79
 set completeopt-=preview
 set encoding=utf8
+set undofile
+set undodir=~/.cache/nvim/undodir
 
 let g:airline_theme='luna'
 let g:airline_powerline_fonts=1
