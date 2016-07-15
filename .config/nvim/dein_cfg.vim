@@ -46,7 +46,7 @@ set tabstop=4
 set smartcase
 set expandtab
 set shiftwidth=4
-set cc=80
+set cc=79
 set completeopt-=preview
 set encoding=utf8
 
