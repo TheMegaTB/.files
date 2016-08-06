@@ -22,10 +22,29 @@ call dein#begin(expand('~/.cache/dein'))
  call dein#add('SirVer/ultisnips')
  call dein#add('scrooloose/nerdtree')
  call dein#add('Xuyuanp/nerdtree-git-plugin')
+
+ "  Distraction free writing
+ call dein#add('junegunn/limelight.vim')
+ call dein#add('junegunn/goyo.vim')
+
  "  Themes
  call dein#add('vim-airline/vim-airline-themes')
  call dein#add('tyrannicaltoucan/vim-deep-space')
  call dein#add('ryanoasis/vim-devicons')
+
+ "  Swift
+ call dein#add('kballard/vim-swift', {'filetypes': 'swift', 'unite_sources': ['swift/device', 'swift/developer_dir']})
+
+ "  JavaScript
+ call dein#add('moll/vim-node')
+ call dein#add('othree/yajs.vim', {'filetypes': 'javascript'})
+ call dein#add('gavocanov/vim-js-indent', {'filetypes': 'javascript'})
+ call dein#add('carlitux/deoplete-ternjs', {'filetypes': 'javascript'})
+ call dein#add('elzr/vim-json', {'filetypes': 'json'})
+
+ "  Markdown
+ call dein#add('plasticboy/vim-markdown', {'filetypes': 'markdown'})
+ call dein#add('dhruvasagar/vim-table-mode', {'filetypes': 'markdown'})
 
 call dein#end()
 
@@ -56,3 +75,6 @@ let g:airline_theme='luna'
 let g:airline_powerline_fonts=1
 let g:airline_skip_empty_sections = 1
 let g:deoplete#enable_at_startup = 1
+
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!

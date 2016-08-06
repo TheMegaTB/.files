@@ -102,6 +102,7 @@ alias 'update-grub'='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias 'cgr'='cargo run --release'
 alias 'cgrb'='cgr --bin'
 alias 'nano'='nvim'
+alias ':q'='exit'
 
 source $ZSH/oh-my-zsh.sh
 
