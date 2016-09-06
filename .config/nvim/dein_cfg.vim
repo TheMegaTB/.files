@@ -46,6 +46,9 @@ call dein#begin(expand('~/.cache/dein'))
  call dein#add('plasticboy/vim-markdown', {'filetypes': 'markdown'})
  call dein#add('dhruvasagar/vim-table-mode', {'filetypes': 'markdown'})
 
+ "  CSV
+ call dein#add('chrisbra/csv.vim', {'filetypes': 'csv'})
+
 call dein#end()
 
 filetype plugin indent on

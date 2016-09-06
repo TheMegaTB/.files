@@ -170,6 +170,7 @@ for_window [class="Nautilus" instance="file_progress"] floating enable
 for_window [class="(?i)pavucontrol"] floating enable, move position center
 for_window [class="(?i)Splashscreen"] floating enable
 for_window [class="net-ftb-main-Main"] floating enable
+for_window [title="Complete Installation"] floating enable
 
 # Bind specific windows to specific workspaces
 assign [title="Soundnode(?i)"]	$ws9
