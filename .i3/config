@@ -179,6 +179,8 @@ assign [class="Eclipse"] $ws3
 assign [class="(?i)atom"]	$ws3
 assign [class="(?i)PyCharm(?i)"] $ws3
 assign [class="qemu-system-x86_64"] $ws8
+assign [class="discord"] $ws9
+assign [title="(?i)Spotify(?i)"] $ws9
 for_window [window_role="pop-up" class="google-chrome" title="(?i)WhatsApp"] resize set 700 700, move absolute position 370 px 100 px, move to scratchpad, scratchpad show
 for_window [window_role="pop-up" class="google-chrome" title="^((?!WhatsApp).)*$"] move to scratchpad, scratchpad show
 
