@@ -5,7 +5,7 @@ alsa_card="alsa_card.pci-0000_00_1b.0"
 if bluetoothctl <<< "info $mac_addr" | grep -qi "Connected: no"; then
       bluetoothctl <<< "connect $mac_addr"
       sleep 6s
-      pactl set-card-profile $alsa_card off
+      pactl set-card-profile $alsa_card input:analog-stereo
       pactl set-card-profile bluez_card.$sink_addr a2dp_sink
       pactl set-sink-volume bluez_sink.$sink_addr 50%
 else
