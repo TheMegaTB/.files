@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 ACPI=$(acpi -b)
-CHARGE=$(echo -n "${ACPI}" | egrep -o "[0-9]+%" | sed -e "s,%,,g")
+#CHARGE=$(echo -n "${ACPI}" | egrep -o "[0-9]+%" | sed -e "s,%,,g")
+CHARGE=$(cat /sys/class/power_supply/BAT0/capacity)
 
 STATE=""
 if grep -q "Charging\|Full" <(echo "${ACPI}" | awk '{ gsub("Unknown","Charging",$3); print $3}'); then
