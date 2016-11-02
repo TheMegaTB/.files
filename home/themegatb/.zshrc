@@ -106,6 +106,7 @@ alias 'cgr'='cargo run --release'
 alias 'cgrb'='cgr --bin'
 alias 'nano'='nvim'
 alias ':q'='exit'
+alias 'rc'='openrc'
 
 source $ZSH/oh-my-zsh.sh
 
