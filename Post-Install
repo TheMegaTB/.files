@@ -1,0 +1,4 @@
+- Add <allow_any>yes</allow_any> to /usr/share/polkit-1/actions/org.freedesktop.upower.policy in the suspend block
+- Run setup.sh and install_baseline.sh after installing OpenRC
+- Add services to the default and full runlevel respectively
+- 

@@ -205,6 +205,11 @@ bindsym $mod+i scratchpad show
 bindsym $mod+c [title="(?i)WhatsApp"] scratchpad show
 bindsym $mod+h [window_role="pop-up" class="google-chrome" title="^((?!WhatsApp).)*$"] scratchpad show
 
+# Move workspaces to different displays
+bindsym $mod+control+1 move workspace to output DVI-I-1
+bindsym $mod+control+2 move workspace to output DP-2
+bindsym $mod+control+3 move workspace to output DP-5
+
 # Remove title bars
 new_window 1pixel
 

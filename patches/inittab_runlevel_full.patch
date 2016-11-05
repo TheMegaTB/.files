@@ -1,0 +1,11 @@
+--- /etc/inittab.orig	2016-11-05 21:32:19.389851124 +0000
++++ /etc/inittab	    2016-11-05 14:29:23.302004027 +0000
+@@ -21,6 +21,8 @@
+ l6r:6:wait:/usr/bin/reboot -d
+ #z6:6:respawn:/usr/bin/sulogin
+ 
++f3:345:once:/usr/bin/openrc full >> /var/log/rc.log
++
+ # new-style single-user
+ su0:S:wait:/usr/bin/openrc single
+ su1:S:wait:/usr/bin/sulogin
