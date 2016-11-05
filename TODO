@@ -1,9 +1,6 @@
  - Fix RTP streaming
  - Hibernate on low battery
  - lock screen on auto suspend
- - Restructure VM setups (stacked images and snapshots)
- - Add mod+arrowkeys to quickly switch workspaces
  - Commit dotfiles on boot
- - Rename 'dotfiles' to '.files'
  - Fix pulseaudio sink-duplication problem in i3blocks
  - Fix broken imgur upload

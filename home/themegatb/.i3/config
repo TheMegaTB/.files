@@ -67,6 +67,12 @@ bindsym $mod+Shift+q kill
 bindsym $mod+space exec --no-startup-id rofi -show run
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 
+# switch workspaces by cursor keys
+bindsym $mod+Left workspace prev
+bindsym $mod+Right workspace next
+bindsym $mod+Up exec --no-startup-id ~/.i3/empty_workspace.sh
+bindsym $mod+Down exec --no-startup-id rofi -show run
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -74,10 +80,10 @@ bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+j move left

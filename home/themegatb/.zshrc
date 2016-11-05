@@ -52,7 +52,7 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(git pass common-aliases dirhistory last-working-dir sudo alias-tips autojump)
 
 # User configuration
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/home/themegatb/.cargo/bin:/usr/local/bin:$PATH
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -106,6 +106,7 @@ alias 'cgr'='cargo run --release'
 alias 'cgrb'='cgr --bin'
 alias 'nano'='nvim'
 alias ':q'='exit'
+alias 'rc'='openrc'
 
 source $ZSH/oh-my-zsh.sh
 
