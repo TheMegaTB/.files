@@ -1,5 +1,5 @@
 if [ -z "$DISPLAY" ]; then
-	if [ "$(tty)" == "/dev/tty1" ]; then
+	if [ "$(tty)" == "/dev/tty6" ]; then
 		startx > /dev/null 2>&1
 	fi
 fi
