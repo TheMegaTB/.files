@@ -186,10 +186,12 @@ assign [class="Eclipse"] $ws3
 assign [class="(?i)atom"]	$ws3
 assign [class="(?i)PyCharm(?i)"] $ws3
 assign [class="qemu-system-x86_64"] $ws8
+for_window [window_role="pop-up"] floating enable
 for_window [class="discord"] move to workspace $ws9
 for_window [class="Spotify"] move to workspace $ws9
-for_window [window_role="pop-up" class="google-chrome" title="(?i)WhatsApp"] resize set 700 700, move absolute position 370 px 100 px, move to scratchpad, scratchpad show
-for_window [window_role="pop-up" class="google-chrome" title="^((?!WhatsApp).)*$"] move to scratchpad, scratchpad show
+for_window [window_role="pop-up" title="(?i)WhatsApp"] resize set 700 700, move absolute position 370 px 100 px, move to scratchpad, scratchpad show
+#for_window [window_role="pop-up" class="google-chrome" title="^((?!WhatsApp).)*$"] move to scratchpad, scratchpad show
+for_window [window_role="pop-up" title="Google Hangouts - til.blechschmidt@gmail.com"] move to scratchpad, scratchpad show
 
 # Custom keybindings
 bindsym $mod+control+l exec ~/.i3/i3-fancy-lock/lock
@@ -203,7 +205,8 @@ bindsym $mod+shift+m workspace prev
 bindsym $mod+o move scratchpad
 bindsym $mod+i scratchpad show
 bindsym $mod+c [title="(?i)WhatsApp"] scratchpad show
-bindsym $mod+h [window_role="pop-up" class="google-chrome" title="^((?!WhatsApp).)*$"] scratchpad show
+# bindsym $mod+h [window_role="pop-up" class="google-chrome" title="^((?!WhatsApp).)*$"] scratchpad show
+bindsym $mod+h [window_role="pop-up" title="Google Hangouts - til.blechschmidt@gmail.com"] scratchpad show
 
 # Move workspaces to different displays
 bindsym $mod+control+1 move workspace to output DVI-I-1
