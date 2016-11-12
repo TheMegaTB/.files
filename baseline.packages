@@ -1,3 +1,5 @@
+unclutter
+neovim
 playerctl
 i3-wm
 dunst
@@ -43,4 +45,6 @@ xbindkeys
 xcompmgr
 xedgewarp-git
 xtitle
-
+scrot
+imagemagick
+vim-dein-git

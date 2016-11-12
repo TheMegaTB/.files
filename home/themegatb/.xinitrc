@@ -39,7 +39,13 @@ redshift &
 numlockx &
 #pulseaudio -D &
 compton -c -r8 -l-12 -t-8  -G  -f -D30 -I0.45 -O0.45  --paint-on-overlay --unredir-if-possible  --backend glx --glx-no-stencil --glx-no-rebind-pixmap &
-xbacklight -time 1000 -set 7 &
+#xbacklight -time 1000 -set 7 &
 #xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 #perl ~/.xSwipe/xSwipe.pl -n -d 0.5 1>/dev/null 2>&1 &
+if [ -f "$HOME/.set_dpi" ]; then ${HOME}/.set_dpi; fi
+
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export GDK_SCALE=2
+export ELM_SCALE=1.5
+
 exec i3

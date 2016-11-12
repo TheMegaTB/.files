@@ -107,6 +107,7 @@ alias 'cgrb'='cgr --bin'
 alias 'nano'='nvim'
 alias ':q'='exit'
 alias 'rc'='openrc'
+alias 'umountusb'='sudo umount /mnt/usb'
 
 source $ZSH/oh-my-zsh.sh
 

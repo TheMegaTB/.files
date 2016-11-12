@@ -1,6 +1,8 @@
 #!/bin/sh
 lock() {
     # /usr/bin/i3lock-fancy &
+    export XAUTHORITY=/home/themegatb/.Xauthority
+    export DISPLAY=:0
     /usr/share/i3fancylock/lock &
     sleep 2
     # /usr/share/i3fancylock/lock
@@ -15,7 +17,7 @@ case "$1" in
         ;;
     suspend)
         lock
-	    rtcwake --seconds 300 --mode no
+	    rtcwake --seconds 1800 --mode no
 	    dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend > /dev/null
         ;;
     hibernate)
