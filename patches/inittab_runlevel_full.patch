@@ -4,7 +4,7 @@
  l6r:6:wait:/usr/bin/reboot -d
  #z6:6:respawn:/usr/bin/sulogin
  
-+f3:345:once:/usr/bin/openrc full >> /var/log/rc.log
++f3:345:once:/home/themegatb/.scripts/wait_for_wifidev.sh >/dev/null
 +
  # new-style single-user
  su0:S:wait:/usr/bin/openrc single
