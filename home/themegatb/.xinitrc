@@ -32,7 +32,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-sh ~/.fehbg &
+#sh ~/.fehbg &
 xbindkeys
 unclutter &
 redshift &
@@ -43,9 +43,5 @@ compton -c -r8 -l-12 -t-8  -G  -f -D30 -I0.45 -O0.45  --paint-on-overlay --unred
 #xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 #perl ~/.xSwipe/xSwipe.pl -n -d 0.5 1>/dev/null 2>&1 &
 if [ -f "$HOME/.set_dpi" ]; then ${HOME}/.set_dpi; fi
-
-export QT_AUTO_SCREEN_SCALE_FACTOR=1
-export GDK_SCALE=2
-export ELM_SCALE=1.5
 
 exec i3

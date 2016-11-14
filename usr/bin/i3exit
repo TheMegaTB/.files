@@ -4,16 +4,12 @@ export XAUTHORITY=/home/themegatb/.Xauthority
 
 lock() {
     # /usr/bin/i3lock-fancy &
-    export XAUTHORITY=/home/themegatb/.Xauthority
-    export DISPLAY=:0
     /usr/share/i3fancylock/lock &
     sleep 2
-    # /usr/share/i3fancylock/lock
 }
 
 blank() {
-    echo ""
-    #sh -c "sleep 2 && /usr/bin/xset -display :0.0 dpms force standby" &
+    /usr/bin/xset -display :0.0 dpms force standby &
 }
 
 case "$1" in

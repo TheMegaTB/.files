@@ -3,13 +3,18 @@
 export DISPLAY=:0
 export XAUTHORITY=/home/themegatb/.Xauthority
 
+EXT="HDMI1"
+INT="eDP1"
+
 function connect(){
-    xrandr --output DP1 --right-of eDP1 --preferred --primary --output eDP1 --preferred 
+    echo "connect"
+    xrandr --output ${EXT} --right-of ${INT} --preferred --primary --output ${INT} --preferred 
 }
   
 function disconnect(){
-      xrandr --output DP1 --off
+    echo "disconnect"
+    xrandr --output ${EXT} --off
 }
    
-xrandr | grep -w "DP1 connected" &> /dev/null && connect || disconnect
+xrandr | grep -w "$EXT connected" &> /dev/null && connect || disconnect
 ~/.fehbg
