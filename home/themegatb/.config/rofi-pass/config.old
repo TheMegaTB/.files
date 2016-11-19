@@ -3,11 +3,10 @@
 
 # rofi command. Make sure to have "$@" as last argument
 _rofi () {
-    rofi -i -no-levenshtein-sort "$@"
+	rofi -z -i -no-levenshtein-sort "$@"
+	#rofi -z -i -width 700 -no-levenshtein-sort "$@"
 }
 
-# keyboard layout (set this to your actual layout. E.g. keyboard="de us"
-#keyboard=us
 
 # fields to be used
 URL_field='url'
@@ -22,26 +21,26 @@ delay=2
 EDITOR='gvim -f'
 
 # Browser
-BROWSER='google-chrome-beta'
+BROWSER='google-chrome-stable'
 
 ## Misc settings
 
-default_do='autotype' # menu, autotype, copyPass, typeUser, typePass, copyUser, copyUrl, viewEntry, typeMenu, actionMenu, copyMenu, openUrl
-auto_enter='false'
+default_do='autopass' # autopass, copyPass, typeUser, typePass, copyUser, copyUrl, viewEntry, typeMenu, actionMenu, copyMenu, openUrl
+auto_enter='true'
 notify='false'
+passlength='20'
+
+# seconds to wait before re-opening showEntry-menu
+# after autotyping an entry. Set to "off" to disable
+count=2
 
 # color of the help messages
 # leave empty for autodetection
-help_color="#4872FF"
+help_color=""
 
 # Clipboard settings
 # Possible options: primary, clipboard, both
 clip=primary
-
-# Options for generating new password entries
-default_user=til@blechschmidt.de
-default_user2=TheMegaTB
-password_length=16
 
 # Custom Keybindings
 autotype="Alt+1"
@@ -59,4 +58,3 @@ action_menu="Alt+a"
 type_menu="Alt+t"
 help="Alt+h"
 switch="Alt+x"
-insert_pass="Alt+n"
