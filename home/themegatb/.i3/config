@@ -194,6 +194,7 @@ for_window [window_role="pop-up" title="(?i)WhatsApp"] resize set 700 700, move 
 for_window [window_role="pop-up" title="Google Hangouts - til.blechschmidt@gmail.com"] move to scratchpad, scratchpad show
 
 # Custom keybindings
+bindsym $mod+shift+f fullscreen toggle global
 bindsym $mod+control+l exec ~/.i3/i3-fancy-lock/lock
 bindsym $mod+shift+s exec --no-startup-id teiler
 bindsym $mod+p exec --no-startup-id rofi-pass
