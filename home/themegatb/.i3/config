@@ -171,7 +171,7 @@ mode --pango_markup "$mode_resize" {
 workspace_auto_back_and_forth yes
 
 # Put specific windows in floating mode
-for_window [window_role="pop-up" class="google-chrome"] floating enable, move absolute position 1160 px 455 px
+for_window [window_role="pop-up" class="google-chrome"] floating enable, move position center
 for_window [class="Nautilus" instance="file_progress"] floating enable
 for_window [class="(?i)pavucontrol"] floating enable, move position center
 for_window [class="(?i)Splashscreen"] floating enable
@@ -191,9 +191,8 @@ assign [class="qemu-system-x86_64"] $ws8
 for_window [window_role="pop-up"] floating enable
 for_window [class="discord"] move to workspace $ws9
 for_window [class="Spotify"] move to workspace $ws9
-for_window [window_role="pop-up" title="(?i)WhatsApp"] resize set 700 700, move absolute position 370 px 100 px, move to scratchpad, scratchpad show
-for_window [window_role="pop-up" title="Google Keep"] resize set 1000 1000, move position mouse, move to scratchpad, scratchpad show
-#for_window [window_role="pop-up" class="google-chrome" title="^((?!WhatsApp).)*$"] move to scratchpad, scratchpad show
+for_window [window_role="pop-up" title="(?i)WhatsApp"] resize set 700 700, move position center, move to scratchpad, scratchpad show
+for_window [window_role="pop-up" title="Google Keep"] resize set 1000 1000, move position center, move to scratchpad, scratchpad show
 for_window [window_role="pop-up" title="Google Hangouts - til.blechschmidt@gmail.com"] move to scratchpad, scratchpad show
 
 # Custom keybindings
@@ -201,7 +200,7 @@ bindsym $mod+shift+f fullscreen toggle global
 bindsym $mod+control+l exec ~/.i3/i3-fancy-lock/lock
 bindsym $mod+shift+s exec --no-startup-id teiler
 bindsym $mod+p exec --no-startup-id rofi-pass
-bindsym $mod+y fullscreen disable; floating enable; resize set 608 342; sticky enable; move window to position 1515 20
+bindsym $mod+y fullscreen disable; floating enable; resize set 608 342; sticky enable; move window to position center
 
 bindsym $mod+shift+comma workspace next
 bindsym $mod+shift+m workspace prev
@@ -210,7 +209,6 @@ bindsym $mod+o move scratchpad
 bindsym $mod+i scratchpad show
 bindsym $mod+c [title="(?i)WhatsApp"] scratchpad show
 bindsym $mod+k [title="Google Keep"] scratchpad show
-# bindsym $mod+h [window_role="pop-up" class="google-chrome" title="^((?!WhatsApp).)*$"] scratchpad show
 bindsym $mod+h [window_role="pop-up" title="Google Hangouts - til.blechschmidt@gmail.com"] scratchpad show
 
 # Move workspaces to different displays
