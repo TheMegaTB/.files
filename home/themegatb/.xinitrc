@@ -35,10 +35,11 @@ fi
 #sh ~/.fehbg &
 xbindkeys
 unclutter &
-redshift &
+redshift -l 51:10 -t 5500:2800 &
 numlockx &
 #pulseaudio -D &
 compton -c -r8 -l-12 -t-8  -G  -f -D30 -I0.45 -O0.45  --paint-on-overlay --unredir-if-possible  --backend glx --glx-no-stencil --glx-no-rebind-pixmap &
+rescuetime &
 #xbacklight -time 1000 -set 7 &
 #xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 #perl ~/.xSwipe/xSwipe.pl -n -d 0.5 1>/dev/null 2>&1 &

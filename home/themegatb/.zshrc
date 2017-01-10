@@ -52,7 +52,8 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(git pass common-aliases dirhistory last-working-dir sudo alias-tips autojump)
 
 # User configuration
-export PATH=$HOME/bin:/home/themegatb/.cargo/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.cargo/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.espsdk/xtensa-lx106-elf/bin:$PATH
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then

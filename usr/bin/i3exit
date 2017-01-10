@@ -9,7 +9,9 @@ lock() {
 }
 
 blank() {
-    /usr/bin/xset -display :0.0 dpms force standby &
+    echo $(xbacklight -get) > /tmp/blintensity
+    xbacklight -time 500 -set 0 &
+    #/usr/bin/xset -display :0.0 dpms force standby &
 }
 
 case "$1" in
@@ -22,7 +24,7 @@ case "$1" in
     suspend)
         blank
         lock
-	    rtcwake --seconds 1800 --mode no
+	    #rtcwake --seconds 1800 --mode no
 	    dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend > /dev/null
         ;;
     hibernate)

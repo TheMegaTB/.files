@@ -201,7 +201,7 @@ bindsym $mod+shift+f fullscreen toggle global
 bindsym $mod+control+l exec ~/.i3/i3-fancy-lock/lock
 bindsym $mod+shift+s exec --no-startup-id teiler
 bindsym $mod+p exec --no-startup-id rofi-pass
-bindsym $mod+y fullscreen disable; floating enable; resize set 608 342; sticky enable; move window to position center
+bindsym $mod+y fullscreen disable; floating enable; resize set 886 500; sticky enable; move window to position center
 
 bindsym $mod+shift+comma workspace next
 bindsym $mod+shift+m workspace prev
