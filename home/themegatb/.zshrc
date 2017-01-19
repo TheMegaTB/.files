@@ -112,4 +112,6 @@ alias 'umountusb'='sudo umount /mnt/usb'
 
 source $ZSH/oh-my-zsh.sh
 
+lwd
+
 /home/themegatb/.startx.sh
