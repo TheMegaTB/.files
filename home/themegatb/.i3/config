@@ -199,8 +199,8 @@ for_window [window_role="pop-up" title="Google Hangouts - til.blechschmidt@gmail
 # Custom keybindings
 bindsym $mod+shift+f fullscreen toggle global
 bindsym $mod+control+l exec ~/.i3/i3-fancy-lock/lock
-bindsym $mod+shift+s exec --no-startup-id teiler
-bindsym $mod+p exec --no-startup-id rofi-pass
+bindsym $mod+shift+s exec teiler
+bindsym $mod+p exec rofi-pass
 bindsym $mod+y fullscreen disable; floating enable; resize set 886 500; sticky enable; move window to position center
 
 bindsym $mod+shift+comma workspace next
@@ -210,8 +210,8 @@ bindsym $mod+o move scratchpad
 bindsym $mod+i scratchpad show
 bindsym $mod+c [title="(?i)WhatsApp"] scratchpad show
 bindsym $mod+k [title="Google Keep"] scratchpad show
-bindsym $mod+d [class="discord"] scratchpad show
 bindsym $mod+h [window_role="pop-up" title="Google Hangouts - til.blechschmidt@gmail.com"] scratchpad show
+bindsym $mod+d exec ~/.scripts/launch_if_not_running.sh discord || i3-msg '[class="discord"] scratchpad show'
 
 # Move workspaces to different displays
 bindsym $mod+control+1 move workspace to output DVI-I-1
