@@ -48,7 +48,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 # Run some important commands
-lwd
 eval "$(thefuck --alias)"
 eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-wcomp zsh-ccomp-install zsh-wcomp-install)"
 
@@ -106,6 +105,8 @@ alias 'nano'='nvim'
 alias ':q'='exit'
 alias 'rc'='openrc'
 alias 'umountusb'='sudo umount /mnt/usb'
+
+lwd
 
 # Launch the graphical session if it is not present 
 [[ -f ${HOME}/.startx.sh ]] && ${HOME}/.startx.sh
