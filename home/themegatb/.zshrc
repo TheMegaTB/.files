@@ -15,7 +15,6 @@ antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-
 BULLETTRAIN_CONTEXT_SHOW=true
 BULLETTRAIN_CONTEXT_DEFAULT_USER="themegatb"
 BULLETTRAIN_EXEC_TIME_SHOW=true
-
 BULLETTRAIN_PROMPT_ORDER=(time context dir git end)
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
@@ -26,17 +25,18 @@ antigen bundle lein
 antigen bundle command-not-found
 antigen bundle autojump
 antigen bundle npm
+antigen bundle sudo
 antigen bundle last-working-dir
 antigen bundle common-aliases
 
 # Some other bundles
 antigen bundle Tarrasch/zsh-autoenv
-antigen bundle djui/alias-tips
 antigen bundle arzzen/calc.plugin.zsh
 antigen bundle unixorn/autoupdate-antigen.zshplugin
 antigen bundle peterhurford/git-it-on.zsh
 antigen bundle jimhester/per-directory-history
 antigen bundle robertzk/send.zsh
+antigen bundle hkupty/ssh-agent
 
 # zsh-users bundles
 antigen bundle zsh-users/zsh-completions
@@ -44,22 +44,27 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# antigen bundle common-aliases
-# antigen bundle Tarrasch/zsh-autoenv
-# antigen bundle zsh-users/zsh-completions
-# # antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-search.zsh
-# antigen bundle djui/alias-tips
-# antigen bundle arzzen/calc.plugin.zsh
-# antigen bundle adolfoabegg/browse-commit
-# antigen bundle unixorn/autoupdate-antigen.zshplugin
-# #antigen bundle tymm/zsh-directory-history
-# antigen bundle peterhurford/git-it-on.zsh
-
 # Tell antigen that you're done.
 antigen apply
 
+# Run some important commands
 lwd
+eval "$(thefuck --alias)"
+eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-wcomp zsh-ccomp-install zsh-wcomp-install)"
 
+# Create the zsh cache directory
+ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
+
+
+# Add user specific bin directory to path
+if [ -d "${HOME}/.bin" ]; then
+    PATH="${HOME}/.bin:${PATH}"
+fi
+
+# Define some awesome functions
 extract () {
   if [ -f $1 ] ; then
       case $1 in
@@ -83,15 +88,12 @@ extract () {
 }
 
 
+# Set text editor preference
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
-eval $(ssh-agent) >/dev/null
 
-eval "$(thefuck --alias)"
-eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-wcomp zsh-ccomp-install zsh-wcomp-install)"
-
-
+# Set some aliases
 alias rsync-progress="rsync -avvz --times --stats --checksum --human-readable --acls --itemize-changes --progress --out-format='[%t] [%i] (Last Modified: %M) (bytes: %-10l) %-100n'"
 alias o="a -e $EDITOR"
 alias c='f -e cat'
@@ -105,7 +107,5 @@ alias ':q'='exit'
 alias 'rc'='openrc'
 alias 'umountusb'='sudo umount /mnt/usb'
 
-# Todo figure out why this needs to be here
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle peterhurford/git-it-on.zsh
-/home/themegatb/.startx.sh
+# Launch the graphical session if it is not present 
+[[ -f ${HOME}/.startx.sh ]] && ${HOME}/.startx.sh

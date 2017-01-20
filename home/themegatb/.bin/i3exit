@@ -4,14 +4,17 @@ export XAUTHORITY=/home/themegatb/.Xauthority
 
 lock() {
     # /usr/bin/i3lock-fancy &
-    /usr/share/i3fancylock/lock &
+    /home/themegatb/.bin/i3fancylock/lock &
     sleep 2
 }
 
 blank() {
     echo $(xbacklight -get) > /tmp/blintensity
     xbacklight -time 500 -set 0 &
-    #/usr/bin/xset -display :0.0 dpms force standby &
+}
+
+resetBacklight() {
+    echo 100 > /tmp/blintensity
 }
 
 case "$1" in
@@ -35,10 +38,12 @@ case "$1" in
     reboot)
         blank
 	    dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart > /dev/null
+        resetBacklight
         ;;
     shutdown)
         blank
 	    dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop > /dev/null
+        resetBacklight
         ;;
     *)
         echo "Usage: $0 {lock|logout|suspend|reboot|shutdown}"
