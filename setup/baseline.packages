@@ -1,3 +1,6 @@
+exfat-utils
+dosfstools
+lvm2-openrc
 ntp
 ntp-openrc
 discord
