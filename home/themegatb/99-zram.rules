@@ -1,0 +1,4 @@
+KERNEL=="zram0", ATTR{disksize}="32G", RUN="/usr/bin/mkfs.ext4 /dev/zram0 && /usr/bin/mount /mnt/zram/Downloads"
+KERNEL=="zram1", ATTR{disksize}="4G", RUN="/usr/bin/mkfs.ext4 /dev/zram1"
+#KERNEL=="zram0", ACTION=="mount", RUN+="mkdir /mnt/zram/Screenshots"
+#KERNEL=="zram0", ACTION=="mount", RUN+="/home/themegatb/.scripts/zram.sh"

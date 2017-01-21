@@ -3,7 +3,21 @@ dosfstools
 lvm2-openrc
 ntp
 ntp-openrc
+lxappearance
+pulseaudio
+pulseaudio-bluetooth
+pulseaudio-zeroconf
+pulseaudio-alsa
+pulseaudio-ctl
+python-neovim
+python2-neovim
+alsa-utils
+pavucontrol
+noto-fonts
+teiler-git
+>>>>>>> Added zram script
 discord
+google-chrome-beta
 spotify
 ttf-hack
 acpid
@@ -45,7 +59,6 @@ numix-icon-theme-git
 numix-themes
 otf-font-awesome
 pass
-pavucontrol
 pm-utils
 procps-ng-nosystemd
 redshift
