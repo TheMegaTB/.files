@@ -30,7 +30,7 @@ antigen bundle last-working-dir
 antigen bundle common-aliases
 
 # Some other bundles
-antigen bundle Tarrasch/zsh-autoenv
+#antigen bundle Tarrasch/zsh-autoenv
 antigen bundle arzzen/calc.plugin.zsh
 antigen bundle unixorn/autoupdate-antigen.zshplugin
 antigen bundle peterhurford/git-it-on.zsh
