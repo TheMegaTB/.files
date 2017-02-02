@@ -3,15 +3,20 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
+name="zram"
+description="Mounts some custom zram devices"
+
 depend() {
-	need dbus udev localmount
+	need dbus 
+	need udev
+	need localmount
 }
 
 start() {
-   	ebegin "Mounting ZRAM drives"
+    ebegin "Mounting ZRAM drives"
     modprobe zram
 
-	echo lz4 > /sys/block/zram0/comp_algorithm
+    echo lz4 > /sys/block/zram0/comp_algorithm
     echo 16G > /sys/block/zram0/disksize
 
     echo lz4 > /sys/block/zram1/comp_algorithm
