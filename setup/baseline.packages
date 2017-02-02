@@ -1,3 +1,9 @@
+numlockx
+vlc
+rsync
+bridge-utils
+spice-gtk3
+qemu
 exfat-utils
 dosfstools
 lvm2-openrc
