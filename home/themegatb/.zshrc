@@ -16,6 +16,7 @@ BULLETTRAIN_CONTEXT_SHOW=true
 BULLETTRAIN_CONTEXT_DEFAULT_USER="themegatb"
 BULLETTRAIN_EXEC_TIME_SHOW=true
 BULLETTRAIN_PROMPT_ORDER=(time context dir git end)
+BULLETTRAIN_PROMPT_CHAR="\$ "
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
