@@ -18,3 +18,9 @@ keycode 19 = 0 parenright degree masculine
 keycode 10 = 1 exclam exclamdown onehalf
 keycode 54 = c C ccedilla Ccedilla
 keycode 24 = q Q copyright registered
+
+clear mod1
+add mod1 = Alt_L Meta_L
+add mod5 = Alt_R
+!clear Mod5
+!add Mod5 = Mode_switch
