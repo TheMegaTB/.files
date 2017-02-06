@@ -19,6 +19,12 @@ keycode 10 = 1 exclam exclamdown onehalf
 keycode 54 = c C ccedilla Ccedilla
 keycode 24 = q Q copyright registered
 
-clear mod1
-add mod1 = Alt_L Meta_L
-add mod5 = Alt_R
+!clear mod1
+!add mod1 = Alt_L Meta_L
+!add mod3 = Alt_R
+!!clear mod5
+!!add mod5 = ISO_Level3_Shift
+!!add mod3 = Mode_switch
+
+keycode 108 = Alt_R
+!Mode_switch Mode_switch Mode_switch Mode_switch
