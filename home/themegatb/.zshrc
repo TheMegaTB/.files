@@ -92,6 +92,8 @@ extract () {
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
+# Set the GO language directory
+export GOPATH=~/.go
 
 # Set some aliases
 alias rsync-progress="rsync -avvz --times --stats --checksum --human-readable --acls --itemize-changes --progress --out-format='[%t] [%i] (Last Modified: %M) (bytes: %-10l) %-100n'"
