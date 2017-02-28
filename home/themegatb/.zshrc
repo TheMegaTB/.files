@@ -12,11 +12,22 @@ bindkey '^[[c' forward-word
 
 # Load the theme
 antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
-BULLETTRAIN_CONTEXT_SHOW=true
+BULLETTRAIN_PROMPT_ORDER=(
+    time
+    status
+    custom
+    context
+    dir
+    perl
+    ruby
+    virtualenv
+    go
+    git
+    hg
+    cmd_exec_time
+)
 BULLETTRAIN_CONTEXT_DEFAULT_USER="themegatb"
-BULLETTRAIN_EXEC_TIME_SHOW=true
-BULLETTRAIN_PROMPT_ORDER=(time context dir git end)
-BULLETTRAIN_PROMPT_CHAR="\$ "
+#BULLETTRAIN_PROMPT_ORDER=(time context dir git end)
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
