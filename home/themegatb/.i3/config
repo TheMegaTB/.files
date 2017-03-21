@@ -212,7 +212,7 @@ bindsym $mod+i scratchpad show
 bindsym $mod+c [title="(?i)WhatsApp"] scratchpad show
 bindsym $mod+k [title="Google Keep"] scratchpad show
 bindsym $mod+h [window_role="pop-up" title="Google Hangouts - til.blechschmidt@gmail.com"] scratchpad show
-bindsym $mod+d exec ~/.scripts/launch_if_not_running.sh discord || i3-msg '[class="discord"] scratchpad show'
+bindsym $mod+d exec ~/.scripts/launch_if_not_running.sh /opt/discord/Discord || i3-msg '[class="discord"] scratchpad show'
 
 # Move workspaces to different displays
 bindsym $mod+control+1 move workspace to output DVI-I-1
