@@ -1,6 +1,6 @@
 TARGET=$1
 
-pidof ${TARGET} -x
+pidof $(readlink -f $(which ${TARGET})) -x
 
 ERRLVL=$?
 
@@ -8,7 +8,7 @@ echo $ERRLVL
 
 if [ $ERRLVL -eq 1 ]; then
     echo "Alternative method"
-    pgrep -f GCal > /dev/null
+    pgrep -f $(which ${TARGET})
     ERRLVL=$?
     echo $ERRLVL
 fi
