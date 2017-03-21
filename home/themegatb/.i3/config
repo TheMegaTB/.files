@@ -9,6 +9,10 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+set $main   DP-4
+set $aux    HDMI-0
+set $side   HDMI-0
+
 set $mod Mod4
 
 set $red		#fb4934
@@ -27,11 +31,11 @@ set $ws7  "7"
 set $ws8  "8: "
 set $ws9  "9: "
 
-workspace $ws1 output DP-5
-workspace $ws2 output DP-2
-workspace $ws3 output DP-2
-workspace $ws8 output DP-5
-workspace $ws9 output DVI-I-1
+workspace $ws1 output $aux
+workspace $ws2 output $main
+workspace $ws3 output $main
+workspace $ws8 output $aux
+workspace $ws9 output $side
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -215,9 +219,9 @@ bindsym $mod+h [window_role="pop-up" title="Google Hangouts - til.blechschmidt@g
 bindsym $mod+d exec ~/.scripts/launch_if_not_running.sh /opt/discord/Discord || i3-msg '[class="discord"] scratchpad show'
 
 # Move workspaces to different displays
-bindsym $mod+control+1 move workspace to output DVI-I-1
-bindsym $mod+control+2 move workspace to output DP-2
-bindsym $mod+control+3 move workspace to output DP-5
+bindsym $mod+control+1 move workspace to output $side
+bindsym $mod+control+2 move workspace to output $main
+bindsym $mod+control+3 move workspace to output $aux
 
 # Remove title bars
 new_window 1pixel
