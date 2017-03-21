@@ -84,3 +84,6 @@ xtitle
 scrot
 imagemagick
 vim-dein-git
+texstudio
+texlive-core
+texlive-bin

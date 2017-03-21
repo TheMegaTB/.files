@@ -1,3 +1,4 @@
+cd ${HOME}
 export _ANTIGEN_CACHE_ENABLED=false
 source ~/.antigen-repo/antigen.zsh
 
@@ -74,6 +75,8 @@ fi
 if [ -d "${HOME}/.bin" ]; then
     PATH="${HOME}/.bin:${PATH}"
 fi
+
+PATH="$(ruby -rubygems -e "puts Gem.user_dir")/bin:${PATH}"
 
 # Define some awesome functions
 extract () {
