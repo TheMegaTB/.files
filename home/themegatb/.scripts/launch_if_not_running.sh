@@ -1,3 +1,5 @@
+#!/bin/sh
+echo $(date) >> /tmp/linrcall
 TARGET=$1
 
 pidof $(readlink -f $(which ${TARGET})) -x
@@ -13,10 +15,10 @@ if [ $ERRLVL -eq 1 ]; then
     echo $ERRLVL
 fi
 
-if [ $ERRLVL -eq 0 ]; then
-    echo "Already running."
-    exit 1
-else
+if [ $ERRLVL -eq 1 ]; then
     ${TARGET}
-    exit 0
 fi
+
+echo ${ERRLVL} >> /tmp/linrcall
+
+[ $ERRLVL -eq 1 ] exit 0 || exit 1
