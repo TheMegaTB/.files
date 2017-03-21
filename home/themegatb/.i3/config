@@ -194,12 +194,14 @@ assign [class="(?i)WebStorm(?i)"] $ws3
 assign [class="(?i)CLion(?i)"] $ws3
 assign [class="qemu-system-x86_64"] $ws8
 for_window [window_role="pop-up"] floating enable
-#for_window [class="discord"] move to workspace $ws9
 for_window [class="discord"] resize set 1400 1000, move position center, move to scratchpad, scratchpad show
 for_window [class="Spotify"] move to workspace $ws9
 for_window [window_role="pop-up" title="(?i)WhatsApp"] resize set 700 700, move position center, move to scratchpad, scratchpad show
 for_window [window_role="pop-up" title="Google Keep"] resize set 1000 1000, move position center, move to scratchpad, scratchpad show
 for_window [window_role="pop-up" title="Google Hangouts - til.blechschmidt@gmail.com"] move to scratchpad, scratchpad show
+for_window [class="Electron" window_role="browser-window"] move to scratchpad, scratchpad show
+for_window [title="Google Calendar(?i)"] resize set 1700 780
+for_window [title="(?i)Inbox"] resize set 1500 1000
 
 # Custom keybindings
 bindsym $mod+shift+f fullscreen toggle global
