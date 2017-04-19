@@ -124,6 +124,7 @@ alias ':wq'='exit'
 alias 'rc'='openrc'
 alias 'umountusb'='sudo umount /mnt/usb'
 alias 'wake-wallace'='echo "$(hostname) is going to knock on wallace door. Hang on a sec...\n" && wakeonlan 4C:72:B9:43:A3:15 && sh -c "until ping -c1 wallace &>/dev/null; do :; done"'
+alias 'rshift'='redshift -l 51:10 -t 5500:2000 &'
 
 lwd
 
