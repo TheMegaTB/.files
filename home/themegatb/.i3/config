@@ -34,6 +34,7 @@ set $ws9  "9: "
 workspace $ws1 output $aux
 workspace $ws2 output $main
 workspace $ws3 output $main
+workspace $ws4 output $aux
 workspace $ws8 output $aux
 workspace $ws9 output $side
 
@@ -184,6 +185,7 @@ set $spotify    [class="Spotify"]
 set $discord    [class="discord"]
 set $whatsapp   [window_role="pop-up" title="(?i)WhatsApp"]
 set $hangouts   [title="Google Hangouts(?i)"]
+set $resolve_sec [class="resolve" title="Secondary Screen"]
 
 # Put specific windows in floating mode
 for_window $chromePop floating enable, move position center
@@ -204,8 +206,10 @@ assign [class="(?i)PyCharm(?i)"] $ws3
 assign [class="(?i)WebStorm(?i)"] $ws3
 assign [class="(?i)CLion(?i)"] $ws3
 assign [class="qemu-system-x86_64"] $ws8
+assign $resolve_sec $ws4
 
 # Set properties for specific windows
+for_window $resolve_sec floating disable
 for_window [window_role=$WR_popup] floating enable
 for_window $discord     resize set 1400 1000, move position center, move to scratchpad, scratchpad show
 for_window $spotify     move to workspace $ws9
@@ -232,7 +236,7 @@ bindsym $mod+o move scratchpad
 bindsym $mod+l scratchpad show
 
 ## Applications
-set $launch exec ~/.scripts/launch_if_not_running.sh
+set $launch exec --no-startup-id ~/.scripts/launch_if_not_running.sh
 bindsym $mod+h $hangouts scratchpad show
 bindsym $mod+shift+d $launch discord || i3-msg '$discord scratchpad show'
 bindsym $mod+d $launch GDrive   || i3-msg '$gdrive scratchpad show'
