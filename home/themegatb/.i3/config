@@ -206,7 +206,7 @@ assign [class="(?i)CLion(?i)"] $ws3
 assign [class="qemu-system-x86_64"] $ws8
 
 # Set properties for specific windows
-for_window [window_role=$WR_popup] floating enable
+for_window [window_role="pop-up"] floating enable
 for_window $discord     resize set 1400 1000, move position center, move to scratchpad, scratchpad show
 for_window $spotify     move to workspace $ws9
 for_window $whatsapp    resize set 700 700, move position center, move to scratchpad, scratchpad show
