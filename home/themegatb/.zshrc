@@ -76,7 +76,7 @@ if [ -d "${HOME}/.bin" ]; then
     PATH="${HOME}/.bin:${PATH}"
 fi
 
-PATH="$(ruby -rubygems -e "puts Gem.user_dir")/bin:${PATH}"
+PATH="$(ruby -rubygems -e "puts Gem.user_dir")/bin:$HOME/.cargo/bin:${PATH}"
 
 # Define some awesome functions
 extract () {

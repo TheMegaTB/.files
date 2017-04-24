@@ -209,8 +209,8 @@ assign [class="qemu-system-x86_64"] $ws8
 assign $resolve_sec $ws4
 
 # Set properties for specific windows
+for_window [window_role="pop-up"] floating enable
 for_window $resolve_sec floating disable
-for_window [window_role=$WR_popup] floating enable
 for_window $discord     resize set 1400 1000, move position center, move to scratchpad, scratchpad show
 for_window $spotify     move to workspace $ws9
 for_window $whatsapp    resize set 700 700, move position center, move to scratchpad, scratchpad show
@@ -223,6 +223,7 @@ for_window $gkeep       resize set 1500 1000, move position center, move to scra
 for_window $gdrive      resize set 1000 1000, move position center, move to scratchpad, scratchpad show
 
 # Custom keybindings
+bindsym $mod+shift+a exec --no-startup-id ~/.scripts/audio/circleSinks.sh
 bindsym $mod+shift+f fullscreen toggle global
 bindsym $mod+control+l exec ~/.i3/i3-fancy-lock/lock
 bindsym $mod+shift+s exec --no-startup-id teiler
@@ -236,7 +237,7 @@ bindsym $mod+o move scratchpad
 bindsym $mod+l scratchpad show
 
 ## Applications
-set $launch exec --no-startup-id ~/.scripts/launch_if_not_running.sh
+set $launch exec --no-startup-id ~/.scripts/i3/launch_if_not_running.sh
 bindsym $mod+h $hangouts scratchpad show
 bindsym $mod+shift+d $launch discord || i3-msg '$discord scratchpad show'
 bindsym $mod+d $launch GDrive   || i3-msg '$gdrive scratchpad show'

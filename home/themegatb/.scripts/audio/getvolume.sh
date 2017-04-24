@@ -6,7 +6,7 @@ x=0
 for key in "${!sinks[@]}"
 do
 	sink="${sinks[$key]}"
-	vol=$(${HOME}/.scripts/getvolume.pl $sink)
+	vol=$(${HOME}/.scripts/audio/getvolume.pl $sink)
 	if [ "${#sinks[@]}" -gt "1" ] && [ "$key" -gt "0" ]; then
 		#output="$output  "
 		output="$output  $sink: "
