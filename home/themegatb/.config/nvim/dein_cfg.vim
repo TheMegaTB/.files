@@ -60,7 +60,9 @@ endif
 
 
 set background=dark
+set termguicolors
 colorscheme deep-space
+let g:deepspace_italics=1
 
 set number
 set noswapfile
@@ -74,7 +76,8 @@ set encoding=utf8
 set undofile
 set undodir=~/.cache/nvim/undodir
 
-let g:airline_theme='luna'
+"let g:airline_theme='luna'
+let g:airline_theme='deep_space'
 let g:airline_powerline_fonts=1
 let g:airline_skip_empty_sections = 1
 let g:deoplete#enable_at_startup = 1
