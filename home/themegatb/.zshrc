@@ -139,3 +139,5 @@ lwd
 
 # Launch the graphical session if it is not present 
 [[ -f ${HOME}/.startx.sh ]] && ${HOME}/.startx.sh
+
+#[[ ! -n "${TMUX}" ]] && (tmux attach -t base || tmux new -s base)
