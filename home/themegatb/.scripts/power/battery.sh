@@ -15,7 +15,7 @@ fi
 LEVEL=$(( (CHARGE - 1) / 20 ))
 ICON="f$(( 244 - LEVEL ))"
 
-if [ "$(ls -A /sys/class/power_supply)" ]; then
+if [ "$(ls -A /sys/class/power_supply | grep BAT0)" ]; then
 	echo -e "  \u${ICON}  ${CHARGE}%${STATE}"
 	[[ ${CHARGE} -lt 5 ]] && {
 	    [[ -z "${STATE}" ]] || i3-msg "fullscreen disable"
