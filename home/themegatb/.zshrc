@@ -101,10 +101,18 @@ extract () {
 	fi  
 }
 
+wake() {
+    echo "Waking $2 up ..."
+    wakeonlan $1
+    sh -c "until ping -c1 $2 &>/dev/null; do :; done"
+}
 
 # Set text editor preference
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+
+# Set the terminal emulator
+export TERMINAL=kitty
 
 # Set the GO language directory
 export GOPATH=~/.go
@@ -123,10 +131,13 @@ alias ':q'='exit'
 alias ':wq'='exit'
 alias 'rc'='openrc'
 alias 'umountusb'='sudo umount /mnt/usb'
-alias 'wake-wallace'='echo "$(hostname) is going to knock on wallace door. Hang on a sec...\n" && wakeonlan 4C:72:B9:43:A3:15 && sh -c "until ping -c1 wallace &>/dev/null; do :; done"'
+alias 'wake-gerald'='wake D0:50:99:39:36:F5 gerald'
+alias 'wake-wallace'='wake 4C:72:B9:43:A3:15 wallace'
 alias 'rshift'='redshift -l 51:10 -t 5500:2000 &'
 
 lwd
 
 # Launch the graphical session if it is not present 
 [[ -f ${HOME}/.startx.sh ]] && ${HOME}/.startx.sh
+
+#[[ ! -n "${TMUX}" ]] && (tmux attach -t base || tmux new -s base)
