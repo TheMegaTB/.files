@@ -295,3 +295,6 @@ exec --no-startup-id ~/.fehbg
 
 # Auto-switch to the first workspace on startup
 exec --no-startup-id i3-msg 'workspace $ws1'
+
+# Dim the screen in
+exec --no-startup-id xbacklight -time 1000 -set 50
