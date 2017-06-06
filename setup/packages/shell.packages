@@ -1,0 +1,15 @@
+###### Shell & Emulators ######
+zsh
+kitty-git
+
+###### Theming ######
+bullet-train-oh-my-zsh-theme-git
+
+###### Utilities ######
+autojump
+fasd
+thefuck
+htop
+
+###### Others ######
+rsync

@@ -1,3 +1,3 @@
 yaourt -Syy pacaur
-pacaur -Syy --noconfirm --noedit $(cat ${DOTFILES}/setup/baseline.packages)
-sudo npm install -g $(cat ${DOTFILES}/setup/npm.packages)
+pacaur -Syy --noconfirm --noedit $(${DOTFILES}/setup/get_packages.sh baseline)
+sudo npm install -g $(${DOTFILES}/setup/get_packages.sh npm)

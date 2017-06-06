@@ -1,0 +1,50 @@
+###### X11 Server and window manager ######
+xorg-xinit
+xorg-server
+xorg-server-utils
+i3-wm
+compton
+conky
+
+###### Utilities ######
+numlockx
+unclutter
+dunst
+i3blocks
+arandr
+i3lock
+redshift
+xbindkeys
+xcompmgr
+xedgewarp-git
+xtitle
+
+###### Theming ######
+lxappearance
+numix-icon-theme-git
+numix-themes
+
+###### Fonts ######
+noto-fonts
+nerd-fonts-git
+otf-font-awesome
+ttf-font-awesome
+
+###### Applications ######
+vlc
+feh
+pavucontrol
+discord
+google-chrome-beta
+spotify
+
+### Passwords
+pass
+rofi
+rofi-pass-git
+
+### Screenshots
+teiler-git
+imgurbash2
+scrot
+imagemagick

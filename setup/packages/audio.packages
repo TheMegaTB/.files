@@ -1,0 +1,18 @@
+pulseaudio
+
+###### ALSA backend ######
+alsa-utils
+pulseaudio-alsa
+
+###### Network streaming ######
+pulseaudio-zeroconf
+
+###### Bluetooth audio ######
+bluez
+bluez-firmware
+bluez-openrc
+pulseaudio-bluetooth
+
+###### Utilities ######
+pulseaudio-ctl
+playerctl

@@ -1,0 +1,32 @@
+###### Filesystems etc. ######
+dosfstools
+exfat-utils
+lvm2-openrc
+
+###### Networking ######
+git
+ntp
+ntp-openrc
+openssh-openrc
+nfs-utils
+nfs-utils-openrc
+avahi-openrc
+
+###### Power & device management ######
+pm-utils
+upower-pm-utils
+udev-openrc
+acpid
+acpid-openrc
+
+###### Permission management ######
+consolekit
+consolekit-openrc
+dbus-openrc
+
+###### Others ######
+json-c
+cronie-openrc
+borg
+procps-ng-nosystemd
+syslog-ng-openrc
