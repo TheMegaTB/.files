@@ -2,9 +2,14 @@
 xorg-xinit
 xorg-server
 xorg-server-utils
-i3-wm
 compton
 conky
+
+###### i3 and bar ######
+i3-gaps
+i3ipc-glib-git
+libmpdclient
+polybar
 
 ###### Utilities ######
 numlockx
@@ -29,6 +34,7 @@ noto-fonts
 nerd-fonts-git
 otf-font-awesome
 ttf-font-awesome
+ttf-material-design-icons
 
 ###### Applications ######
 vlc
