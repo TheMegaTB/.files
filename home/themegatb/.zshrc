@@ -112,7 +112,7 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 # Set the terminal emulator
-export TERMINAL=kitty
+export TERMINAL=termite
 
 # Set the GO language directory
 export GOPATH=~/.go
