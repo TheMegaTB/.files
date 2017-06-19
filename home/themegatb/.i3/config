@@ -204,6 +204,7 @@ for_window [class="(?i)Splashscreen"] floating enable
 for_window [class="net-ftb-main-Main"] floating enable
 for_window [title="Complete Installation"] floating enable
 for_window [class="Cerebro"] floating enable
+for_window [title="(?i)POPUP(?i)"] floating enable
 
 # Bind specific windows to specific workspaces
 assign [title="Soundnode(?i)"]	$ws9

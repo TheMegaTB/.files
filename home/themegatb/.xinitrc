@@ -49,4 +49,10 @@ compton -c -r8 -l-12 -t-8  -G  -f -D30 -I0.45 -O0.45  --paint-on-overlay --unred
 #perl ~/.xSwipe/xSwipe.pl -n -d 0.5 1>/dev/null 2>&1 &
 if [ -f "$HOME/.set_dpi" ]; then ${HOME}/.set_dpi; fi
 
+# exec gnome-session
+# Fix Missing Applications in GNOME
+export XDG_MENU_PREFIX=gnome-
+
+# Properly Launch the Desired X Session
+#exec ck-launch-session gnome-session
 exec i3

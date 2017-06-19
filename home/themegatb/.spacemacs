@@ -40,7 +40,7 @@ values."
      auto-completion
      emacs-lisp
      git
-     (version-control :variables version-control-global-margin t version-control-diff-tool 'git-gutter)
+     (version-control :variables version-control-global-margin t version-control-diff-tool 'diff-hl)
      (shell :variables shell-default-height 30 shell-default-position 'bottom)
      spell-checking
      syntax-checking
@@ -56,6 +56,7 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(smooth-scroll)
+   ;; dotspacemacs-additional-packages '()
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -325,9 +326,15 @@ you should place your code here."
   (add-hook 'spacemacs-buffer-mode-hook (lambda () (set (make-local-variable 'mouse-1-click-follows-link) nil)))
 
   ( require 'smooth-scroll                        ) ;; Smooth scroll 
-  ( smooth-scroll-mode 1                          ) ;; Enable it 
-  ( setq smooth-scroll/vscroll-step-size 10        ) ;; Set the speed right
+  ( smooth-scroll-mode 3                          ) ;; Enable it 
+  ( setq smooth-scroll/vscroll-step-size 1        ) ;; Set the speed right
 
+  ;; (require 'sublimity)
+  ;; (require 'sublimity-scroll)
+  ;;   (sublimity-mode 1)
+  (setq scroll-step 1)
+  (setq scroll-conservatively 10000)
+  (setq auto-window-vscroll nil)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
