@@ -1,3 +1,7 @@
 [user]
 	email = til@blechschmidt.de
 	name = Til Blechschmidt
+[push]
+	default = simple
+[core]
+	autocrlf = input
