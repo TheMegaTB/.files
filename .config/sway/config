@@ -1,0 +1,255 @@
+### Variables
+#
+# Colors
+set $red                #fb4934
+set $green              #4E9C00
+set $dark_green         #1B3600
+set $white              #EBDBB2
+set $transparent        #333341A0 
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+# Direction keys. Mapped to arrow keys
+set $left Left
+set $down Down
+set $up Up
+set $right Right
+# Your preferred terminal emulator
+set $term kitty
+# Your preferred application launcher
+set $menu rofi -show run -lazy-grab
+# Workspaces
+set $ws1  "1:  "
+set $ws2  "2:  "
+set $ws3  "3:  "
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8: "
+set $ws9  "9: "
+
+### Output configuration
+#
+# Default wallpaper (more resolutions are available in /usr/share/sway/)
+output * bg /usr/share/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+### Input configuration
+input "1739:24385:15320205:00_06C" {
+	accel_profile flat
+	click_method clickfinger
+	dwt enabled
+	natural_scroll enabled
+	#pointer_accel -1
+	scroll_method two_finger
+}
+
+### Application settings
+#
+# Generic window properties
+default_border none
+#
+# App definitions
+set $chromePop  [window_role=$WR_popup class="google-chrome"]
+set $gcal       [window_role="browser-window" title="Google Calendar(?i)"]
+set $inbox      [window_role="browser-window" title="(?i)Inbox"]
+set $gkeep      [window_role="browser-window" title="Google Keep"]
+set $gdrive     [window_role="browser-window" title="(?i)Google Drive"]
+set $spotify    [class="Spotify"]
+set $discord    [class="discord"]
+set $whatsapp   [window_role="pop-up" title="(?i)WhatsApp"]
+set $hangouts   [title="Google Hangouts(?i)"]
+set $resolve_sec [class="resolve" title="Secondary Screen"
+#
+# Floating mode for windows
+for_window $chromePop floating enable, move position center
+for_window [class="Nautilus" instance="file_progress"] floating enable
+for_window [class="(?i)pavucontrol"] floating enable, move position center
+for_window [class="(?i)Splashscreen"] floating enable
+for_window [class="net-ftb-main-Main"] floating enable
+for_window [title="Complete Installation"] floating enable
+for_window [class="Cerebro"] floating enable
+for_window [title="(?i)POPUP(?i)"] floating enable
+#
+# Workspace bindings
+assign [title="Soundnode(?i)"]  $ws9
+assign [class="google-chrome-beta" window_role="^((?!pop-up).)*$"]      $ws1
+assign [class="Firefox"] $ws1
+assign [class="Eclipse"] $ws3
+assign [class="(?i)atom"]       $ws3
+assign [class="(?i)PyCharm(?i)"] $ws3
+assign [class="(?i)WebStorm(?i)"] $ws3
+assign [class="(?i)CLion(?i)"] $ws3
+assign [class="qemu-system-x86_64"] $ws8
+assign $resolve_sec $ws4
+#
+# Window properties
+for_window [window_role="pop-up"] floating enable
+for_window $resolve_sec floating disable
+for_window $discord     resize set 1400 1000, move position center, move to scratchpad, scratchpad show
+for_window $spotify     move to workspace $ws9
+for_window $whatsapp    resize set 700 700, move position center, move to scratchpad, scratchpad show
+for_window $hangouts    move to scratchpad, scratchpad show
+# Electron apps
+for_window [class="Electron"] floating enable, move position center
+for_window $gcal        resize set 1700 780, move position center, move to scratchpad, scratchpad show
+for_window $inbox       resize set 1000 1000, move position center, move to scratchpad, scratchpad show
+for_window $gkeep       resize set 1500 1000, move position center, move to scratchpad, scratchpad show
+for_window $gdrive      resize set 1000 1000, move position center, move to scratchpad, scratchpad show
+
+
+### Key bindings
+#
+# Basics:
+#
+    # start a terminal
+    bindsym $mod+Return exec $term
+
+    # kill focused window
+    bindsym $mod+Shift+q kill
+
+    # start your launcher
+    #bindsym $mod+d exec $menu
+    bindsym $mod+space exec $menu
+
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
+    floating_modifier $mod normal
+
+    # reload the configuration file
+    bindsym $mod+Shift+r reload
+
+    # exit sway (logs you out of your wayland session)
+    bindsym $mod+Shift+e exit
+    
+    # launch the window switcher
+    bindsym $mod+Tab exec --no-startup-id rofi -show window
+#
+# Moving around:
+#
+    # Move your focus around
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+
+    # _move_ the focused window with the same, but add Shift
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+#
+# Workspaces:
+#
+    # switch back and forth
+    workspace_auto_back_and_forth yes
+    # switch to workspace
+    bindsym $mod+1 workspace $ws1
+    bindsym $mod+2 workspace $ws2
+    bindsym $mod+3 workspace $ws3
+    bindsym $mod+4 workspace $ws4
+    bindsym $mod+5 workspace $ws5
+    bindsym $mod+6 workspace $ws6
+    bindsym $mod+7 workspace $ws7
+    bindsym $mod+8 workspace $ws8
+    bindsym $mod+9 workspace $ws9
+    # move focused container to workspace
+    bindsym $mod+Shift+1 move container to workspace $ws1
+    bindsym $mod+Shift+2 move container to workspace $ws2
+    bindsym $mod+Shift+3 move container to workspace $ws3
+    bindsym $mod+Shift+4 move container to workspace $ws4
+    bindsym $mod+Shift+5 move container to workspace $ws5
+    bindsym $mod+Shift+6 move container to workspace $ws6
+    bindsym $mod+Shift+7 move container to workspace $ws7
+    bindsym $mod+Shift+8 move container to workspace $ws8
+    bindsym $mod+Shift+9 move container to workspace $ws9
+#
+# Layout stuff:
+#
+    # You can "split" the current object of your focus with
+    # $mod+b or $mod+v, for horizontal and vertical splits
+    # respectively.
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+
+    # Switch the current container between different layout styles
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
+
+    # Make the current focus fullscreen
+    bindsym $mod+f fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+space floating toggle
+
+    # Swap focus between the tiling area and the floating area
+    #bindsym $mod+space focus mode_toggle
+
+    # move focus to the parent container
+    bindsym $mod+a focus parent
+#
+# Scratchpad:
+#
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+minus move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+minus scratchpad show
+#
+# Resizing containers:
+#
+mode "resize" {
+    # Change container size in small steps
+    bindsym $left resize shrink width 10 px or 1 ppt
+    bindsym $down resize grow height 10 px or 1 ppt
+    bindsym $up resize shrink height 10 px or 1 ppt
+    bindsym $right resize grow width 10 px or 1 ppt
+
+    bindsym Shift+$left resize shrink width 20 px or 5 ppt
+    bindsym Shift+$down resize grow height 20 px or 5 ppt
+    bindsym Shift+$up resize shrink height 20 px or 5 ppt
+    bindsym Shift+$right resize grow width 20 px or 5 ppt
+
+    # return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    position top
+    colors {
+	separator #888888
+	background $transparent
+	statusline $white
+	focused_workspace $green $green $white
+	active_workspace $transparent $transparent $white
+	inactive_workspace $transparent $transparent #888888
+	urgent_workspace $transparent $transparent $white
+    } 
+#    colors {
+#        statusline #ffffff
+#        background #323232
+#        inactive_workspace #32323200 #32323200 #5c5c5c
+#    }
+}
+
+include /etc/sway/config.d/*
