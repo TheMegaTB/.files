@@ -1,0 +1,6 @@
+#!/bin/sh
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey '^[[d' backward-word
+bindkey '^[[c' forward-word

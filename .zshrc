@@ -48,5 +48,9 @@ source ${HOME}/.shell/helpers
 source ${HOME}/.shell/aliases
 
 
+# Load custom keybindings
+source ${HOME}/.shell/keybindings
+
+
 # Enter the graphical environment
 [[ -f ${HOME}/.enter-graphical ]] && ${HOME}/.enter-graphical
