@@ -1,9 +1,0 @@
-[submodule "home/themegatb/.antigen-repo"]
-	path = home/themegatb/.antigen-repo
-	url = https://github.com/zsh-users/antigen
-[submodule "home/themegatb/.tmux/plugins/tpm"]
-	path = home/themegatb/.tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
-[submodule "home/themegatb/.emacs.d"]
-	path = home/themegatb/.emacs.d
-	url = https://github.com/syl20bnr/spacemacs
