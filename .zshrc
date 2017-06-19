@@ -6,6 +6,11 @@ source ~/.antigen/antigen.zsh
 ## Load oh-my-zsh
 antigen use oh-my-zsh
 
+## Load the oh-my-zsh theme
+antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+## Load bullet-train settings
+source ${HOME}/.shell/bullet-train
+
 ## Load bundles
 ### Default repo bundles
 antigen bundle git

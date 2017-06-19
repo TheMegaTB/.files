@@ -1,0 +1,16 @@
+#!/bin/sh
+BULLETTRAIN_PROMPT_ORDER=(
+    time
+    status
+    custom
+    context
+    dir
+    perl
+    ruby
+    virtualenv
+    go
+    git
+    hg
+    cmd_exec_time
+)
+BULLETTRAIN_CONTEXT_DEFAULT_USER="themegatb"
