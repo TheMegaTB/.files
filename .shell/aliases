@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Generic laziness
+alias 'size'='du -sh'
+alias 'rsync-progress'='rsync -avvz --times --stats --checksum --human-readable --acls --itemize-changes --progress --out-format="[%t] [%i] (Last Modified: %M) (bytes: %-101) %-100n"'
+
+# VIM enforcement
+alias 'nano'='nvim'
+alias ':q'='exit'
+alias ':wq'=':q'
+
+# Cargo shortcuts
+alias 'cgr'='cargo run --release'
+alias 'cgrb'='cgr --bin'
+
+# USB related things
+alias 'umountusb'='sudo umount /mnt/usb'
+
+# WoL commands
+alias 'wake-gerald'='wake D0:50:99:39:36:F5 gerald'
+alias 'wake-wallace'='wake 4C:72:B9:43:A3:15 wallace'
+
