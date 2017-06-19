@@ -1,6 +1,0 @@
- - Fix RTP streaming
- - Hibernate on low battery
- - lock screen on auto suspend
- - Commit dotfiles on boot
- - Fix pulseaudio sink-duplication problem in i3blocks
- - Fix broken imgur upload
