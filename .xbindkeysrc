@@ -1,0 +1,28 @@
+"i3 workspace prev"
+  b:11
+
+"i3 workspace next"
+  b:10
+
+"i3 'exec --no-startup-id rofi -show run'"
+  b:9
+
+"~/.i3/empty_workspace.sh"
+  b:8
+
+"playerctl next"
+  XF86AudioNext
+
+"playerctl previous"
+  XF86AudioPrev
+
+"playerctl play-pause"
+  XF86AudioPlay
+
+# Decrease volume
+"pamixer --decrease 5"
+   m:0x0 + c:122
+
+# Increase volume
+"pamixer --increase 5"
+   XF86AudioRaiseVolume

@@ -1,3 +1,5 @@
 .ssh/id_rsa
 .ssh/id_rsa.pub
 .config/pulse/cookie
+.gnupg/private-keys-v1.d/*
+.gnupg/pubring.kbx

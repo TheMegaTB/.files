@@ -52,7 +52,7 @@ input "1739:24385:15320205:00_06C" {
 ### Application settings
 #
 # Generic window properties
-default_border none
+default_border pixel 1
 #
 # App definitions
 set $chromePop  [window_role=$WR_popup class="google-chrome"]
@@ -132,6 +132,9 @@ for_window $gdrive      resize set 1000 1000, move position center, move to scra
     
     # launch the window switcher
     bindsym $mod+Tab exec --no-startup-id rofi -show window
+
+    # launch the password entry
+    bindsym $mod+p exec --no-startup-id ~/.rofi-pass/rofi-pass
 #
 # Moving around:
 #
