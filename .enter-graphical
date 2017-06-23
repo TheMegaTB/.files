@@ -1,6 +1,7 @@
 #!/bin/bash
 if [ -z "$DISPLAY" ]; then
 	if [ "$(tty)" == "/dev/tty6" ]; then
+		source ~/.zshenv
 		XSESSION=i3 startx
 		#sway
 	fi

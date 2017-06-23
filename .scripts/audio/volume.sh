@@ -4,6 +4,7 @@ DELTA="10%"
 PACTL="sudo -u themegatb /usr/bin/pactl"
 PACMD="sudo -u themegatb /usr/bin/pacmd"
 for sink in $($PACMD list-sinks | grep index | awk -F ": " '{print $NF}'); do
+	echo "setting sink volume"
     if [ "$1" == "-" ]; then
         $PACTL -- set-sink-volume "${sink}" "-${DELTA}"
     elif [ "$1" == "+" ]; then

@@ -238,7 +238,7 @@ for_window $gdrive      resize set 1000 1000, move position center, move to scra
 bindsym $mod+shift+a exec --no-startup-id ~/.scripts/audio/circleSinks.sh
 bindsym $mod+shift+f fullscreen toggle global
 bindsym $mod+control+l exec ~/.i3/i3-fancy-lock/lock
-bindsym $mod+shift+s exec --no-startup-id teiler
+bindsym $mod+shift+s exec --no-startup-id ~/.scripts/i3/take_screenshot.sh
 bindsym $mod+p exec --no-startup-id ~/.rofi-pass/rofi-pass
 bindsym $mod+y fullscreen disable; floating enable; resize set 886 500; sticky enable; move window to position center
 
