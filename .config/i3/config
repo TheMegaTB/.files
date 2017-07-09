@@ -263,7 +263,8 @@ bindsym $mod+control+2 move workspace to output $main
 bindsym $mod+control+3 move workspace to output $aux
 
 # Remove title bars
-new_window 1pixel
+new_window pixel 1
+new_float pixel 1
 
 # Add system menu
 set $mode_power <span>     </span><span background='#fabd2f' foreground='#000000'> power </span> <span foreground='#FFFFFF'>l</span>ock <span foreground='#FFFFFF'>e</span>xit <span foreground='#FFFFFF'>s</span>uspend <span foreground='#FFFFFF'>h</span>ibernate <span foreground='#FFFFFF'>r</span>eboot <span foreground='#FFFFFF'>p</span>oweroff
@@ -304,6 +305,7 @@ client.urgent #C20000 #C20000 #FFFFFF #FFFFFF
 exec --no-startup-id xedgewarp -b
 exec --no-startup-id conky --quiet -u 10 -d
 exec --no-startup-id ~/.fehbg
+exec --no-startup-id flameshot
 
 # Auto-switch to the first workspace on startup
 exec --no-startup-id i3-msg 'workspace $ws1'
