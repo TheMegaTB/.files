@@ -39,6 +39,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # Apply antigen settings
 antigen apply
 
+# Enter the last working directory
+lwd
+
 
 # Load custom functions
 source ${HOME}/.shell/helpers
