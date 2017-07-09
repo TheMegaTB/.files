@@ -5,4 +5,5 @@ FORMAT=png
 
 mkdir -p ${FOLDER}
 
-maim -s -c 1,0,0,0.4 -b 5 --format ${FORMAT} ${FOLDER}/${FILENAME}.${FORMAT}
+flameshot gui -p ${FOLDER}
+#maim -s -c 1,0,0,0.4 -b 5 --format ${FORMAT} ${FOLDER}/${FILENAME}.${FORMAT}
