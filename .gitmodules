@@ -7,3 +7,9 @@
 [submodule ".rofi-pass"]
 	path = .rofi-pass
 	url = https://github.com/carnager/rofi-pass
+[submodule "/home/themegatb/.emacs.d"]
+	path = /home/themegatb/.emacs.d
+	url = https://github.com/syl20bnr/spacemacs
+[submodule "/home/themegatb/.spacemacs-cmake-ide"]
+	path = /home/themegatb/.spacemacs-cmake-ide
+	url = https://github.com/nagunn/spacemacs-cmake-ide.git
