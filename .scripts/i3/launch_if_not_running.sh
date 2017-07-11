@@ -16,9 +16,9 @@ if [ $ERRLVL -eq 1 ]; then
 fi
 
 if [ $ERRLVL -eq 1 ]; then
-    ${TARGET}
+    ${TARGET} $2
 fi
 
-echo ${ERRLVL} >> /tmp/linrcall
+#echo ${ERRLVL} >> /tmp/linrcall
 
 [ $ERRLVL -eq 1 ] exit 0 || exit 1

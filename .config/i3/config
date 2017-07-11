@@ -218,6 +218,7 @@ assign [class="(?i)PyCharm(?i)"] $ws3
 assign [class="(?i)WebStorm(?i)"] $ws3
 assign [class="(?i)CLion(?i)"] $ws3
 assign [class="qemu-system-x86_64"] $ws8
+assign [title="emacs(?i)"] $ws3
 assign $resolve_sec $ws4
 
 # Set properties for specific windows
@@ -256,6 +257,7 @@ bindsym $mod+d $launch GDrive   || i3-msg '$gdrive scratchpad show'
 bindsym $mod+c $launch GCal     || i3-msg '$gcal scratchpad show'
 bindsym $mod+k $launch GKeep    || i3-msg '$gkeep scratchpad show'
 bindsym $mod+i $launch GInbox   || i3-msg '$inbox scratchpad show'
+bindsym $mod+shift+e $launch "emacsclient -c"
 
 # Move workspaces to different displays
 bindsym $mod+control+1 move workspace to output $side
