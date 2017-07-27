@@ -1,15 +1,15 @@
-[submodule "~/antigen-repo"]
-	path = ~/antigen-repo
+[submodule ".antigen-repo"]
+	path = .antigen-repo
 	url = https://github.com/zsh-users/antigen.git
-[submodule "~/.antigen"]
-	path = ~/.antigen
+[submodule ".antigen"]
+	path = .antigen
 	url = https://github.com/zsh-users/antigen.git
-[submodule "~/.rofi-pass"]
-	path = ~/.rofi-pass
+[submodule ".rofi-pass"]
+	path = .rofi-pass
 	url = https://github.com/carnager/rofi-pass
-[submodule "~/.emacs.d"]
-	path = ~/.emacs.d
+[submodule ".emacs.d"]
+	path = .emacs.d
 	url = https://github.com/syl20bnr/spacemacs
-[submodule "~/.spacemacs-cmake-ide"]
-	path = ~/.spacemacs-cmake-ide
+[submodule ".spacemacs-cmake-ide"]
+	path = .spacemacs-cmake-ide
 	url = https://github.com/nagunn/spacemacs-cmake-ide.git
