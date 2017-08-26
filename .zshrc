@@ -7,7 +7,8 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 
 ## Load the oh-my-zsh theme
-antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+# antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+antigen theme evan
 ## Load bullet-train settings
 source ${HOME}/.shell/bullet-train
 
