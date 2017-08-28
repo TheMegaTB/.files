@@ -6,6 +6,7 @@ brew "pass"
 cask "telegram"
 cask "spotify"
 cask "vlc"
+cask "feed-the-beast"
 cask "steam"
 
 # Productivity
@@ -14,8 +15,9 @@ cask "dash"
 cask "docker"
 cask "amethyst"
 
-# NodeJS
+# Programming languages
 brew "node"
+cask "java"
 
 # Spacemacs
 #tap "d12frosted/emacs-plus"
