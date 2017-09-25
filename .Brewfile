@@ -1,12 +1,15 @@
 brew "wakeonlan"
 brew "gpg"
 brew "pass"
+brew "wget"
 
 # Communication / Social / Entertainment
 cask "telegram"
 cask "spotify"
 cask "vlc"
 cask "feed-the-beast"
+cask "multimc"
+cask "minecraft"
 cask "steam"
 
 # Productivity
@@ -17,7 +20,10 @@ cask "amethyst"
 
 # Programming languages
 brew "node"
+brew "cmake"
 cask "java"
+## Rust
+brew "ispell"
 
 # Spacemacs
 #tap "d12frosted/emacs-plus"
