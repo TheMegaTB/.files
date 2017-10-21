@@ -2,6 +2,7 @@ brew "wakeonlan"
 brew "gpg"
 brew "pass"
 brew "wget"
+brew "watch"
 
 # Communication / Social / Entertainment
 cask "telegram"
@@ -20,6 +21,7 @@ cask "amethyst"
 
 # Programming languages
 brew "node"
+brew "yarn"
 brew "cmake"
 cask "java"
 ## Rust
