@@ -58,3 +58,6 @@ source ${HOME}/.shell/keybindings
 
 # Enter the graphical environment
 [[ -f ${HOME}/.enter-graphical ]] && ${HOME}/.enter-graphical
+
+# added by travis gem
+[ -f /Users/themegatb/.travis/travis.sh ] && source /Users/themegatb/.travis/travis.sh

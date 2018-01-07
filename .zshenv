@@ -8,3 +8,5 @@ export EDITOR="$VISUAL"
 export PATH="${HOME}/.bin:/usr/local/bin:${PATH}"
 ## Add rustup folder
 export PATH="$HOME/.cargo/bin:$PATH"
+
+export LLVM_ROOT="/usr/local/opt/emscripten/libexec/llvm/bin"

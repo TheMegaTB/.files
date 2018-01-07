@@ -3,6 +3,8 @@ brew "gpg"
 brew "pass"
 brew "wget"
 brew "watch"
+brew "wireshark"
+cask "wireshark"
 
 # Communication / Social / Entertainment
 cask "telegram"
@@ -26,14 +28,25 @@ brew "cmake"
 cask "java"
 ## Rust
 brew "ispell"
+## Lisp
+brew "sbcl"
+brew "rlwrap"
 
 # Spacemacs
 #tap "d12frosted/emacs-plus"
 #brew brew "emacs-plus"
 #linkapps "emacs-plus"
 
+# Atom
+cask "atom"
+
 # Terminal
 cask "hyper"
 brew "zsh"
 brew "autojump"
 brew "neovim"
+
+# Cryptocurrency mining
+brew "libmicrohttpd"
+brew "hwloc"
+brew "openssl"

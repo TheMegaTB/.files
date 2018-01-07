@@ -7,6 +7,15 @@ wake() {
     sh -c "until ping -c1 $2 &>/dev/null; do sleep 1; done"
 }
 
+# Move changes to other branch
+gcbranch() {
+    BRANCH="${1}"
+    g stash
+    g checkout -b "${BRANCH}"
+    g stash apply
+    g push --set-upstream origin "${BRANCH}"
+}
+
 # Extract tool to extract all kinds of files
 extract () {
   if [ -f $1 ] ; then
